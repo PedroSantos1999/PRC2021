@@ -1,0 +1,646 @@
+{
+    "unidadesCurriculares": [
+        {
+            "sigla": "PRC",
+            "designacao": "Processamento e Representação de Conhecimento",
+            "anoLetivo": "2020/2021"
+        }, {
+            "sigla": "CP",
+            "designacao": "Computação Paralela",
+            "anoLetivo": "2020/2021"
+        }, {
+            "sigla": "SSI",
+            "designacao": "Segurança de Sistemas Informáticos",
+            "anoLetivo": "2020/2021"
+        }, {
+            "sigla": "VC",
+            "designacao": "Visão por Computador",
+            "anoLetivo": "2020/2021"
+        }
+    ],
+    "professores": [
+        {
+            "sigla": "pn",
+            "nome": "Pedro Neves",
+            "ensina": "PRC"
+        }, {
+            "sigla": "jn",
+            "nome": "Joana Santos",
+            "ensina": "CP"
+        }, {
+            "sigla": "jm",
+            "nome": "José Martins",
+            "ensina": "SSI"
+        }, {
+            "sigla": "cr",
+            "nome": "Cristina Rodrigues",
+            "ensina": "VC"
+        }
+    ],
+    "alunos": [
+        {
+            "id": "6039240a0c175a2c220c0cb7",
+            "nome": "Chasity Rosario"
+        },
+        {
+            "id": "6039240a789af464cc8ef741",
+            "nome": "Randi Stone"
+        },
+        {
+            "id": "6039240aa1c630cbde8fe787",
+            "nome": "Stephens Nunez"
+        },
+        {
+            "id": "6039240a481abb944ce67cae",
+            "nome": "Jimmie Green"
+        }, {
+            "id": "6039240a3447f19e59e63425",
+            "nome": "Freida Moreno"
+        }, {
+            "id": "6039240a963ad86db42e4a9c",
+            "nome": "Mack Floyd"
+        }, {
+            "id": "6039240a120b7a8bf3adb083",
+            "nome": "Mae Alvarez"
+        }, {
+            "id": "6039240ac4ff977fa4aeb012",
+            "nome": "Edna Melton"
+        }, {
+            "id": "6039240a5af25f00506e2d78",
+            "nome": "Ollie Cohen"
+        }, {
+            "id": "6039240a8fab0327c3429fa8",
+            "nome": "Christian Howe"
+        }, {
+            "id": "6039240a8674753e44f22afb",
+            "nome": "Kirkland Cooper"
+        }, {
+            "id": "6039240aa8d6f67117329dd0",
+            "nome": "Clay Smith"
+        }, {
+            "id": "6039240a929d41c9841ac14b",
+            "nome": "Cooper Holmes"
+        }, {
+            "id": "6039240a4125a7e52b517e07",
+            "nome": "Wells Bauer"
+        }, {
+            "id": "6039240a34c28ddbe1fe01dd",
+            "nome": "Boone Branch"
+        }, {
+            "id": "6039240a35b1ab422a4dc80c",
+            "nome": "Weaver Jarvis"
+        }, {
+            "id": "6039240acec6f3826e354662",
+            "nome": "Strickland Huffman"
+        }, {
+            "id": "6039240a47a6e49f74422bec",
+            "nome": "Claudine Holloway"
+        }, {
+            "id": "6039240a56e45bea5b25b7f7",
+            "nome": "Charity Welch"
+        }, {
+            "id": "6039240a30c3f36d07aec298",
+            "nome": "Conway Moon"
+        }, {
+            "id": "6039240ac3206efc706880d6",
+            "nome": "Duran Duffy"
+        }, {
+            "id": "6039240ae2cb104d8f1ece3d",
+            "nome": "Lloyd Mayo"
+        }, {
+            "id": "6039240a4a58f488c9f59986",
+            "nome": "Helena Navarro"
+        }, {
+            "id": "6039240a4cc47f1943aef0ed",
+            "nome": "Barnett Beach"
+        }, {
+            "id": "6039240a317ab7bfbc273302",
+            "nome": "Bell Mcdowell"
+        }, {
+            "id": "6039240a4d61f42be3739cfa",
+            "nome": "Alissa Garrison"
+        }, {
+            "id": "6039240aceb201b0cff82fb3",
+            "nome": "Gamble Miranda"
+        }, {
+            "id": "6039240aba38f83830997efb",
+            "nome": "Kerr Stevenson"
+        }, {
+            "id": "6039240a1727f8b977c19a5c",
+            "nome": "Clarke Mccoy"
+        }, {
+            "id": "6039240a80400c9e5c802a85",
+            "nome": "Rasmussen Ellison"
+        }, {
+            "id": "6039240a6be0684b9c3cfe40",
+            "nome": "Sally Nielsen"
+        }, {
+            "id": "6039240a4ee04081c786acd0",
+            "nome": "Maynard Jenkins"
+        }, {
+            "id": "6039240aa2e176823f66a496",
+            "nome": "Duncan Everett"
+        }, {
+            "id": "6039240af444106b9eb88624",
+            "nome": "Stacie West"
+        }, {
+            "id": "6039240afd232e58c68b6fea",
+            "nome": "Jacqueline Gregory"
+        }, {
+            "id": "6039240aeb100d8ad2080681",
+            "nome": "Young Decker"
+        }, {
+            "id": "6039240af89cee8f44d3ce7a",
+            "nome": "Blanca Collins"
+        }, {
+            "id": "6039240a0270cb9e6fa5446e",
+            "nome": "Jane Finley"
+        }, {
+            "id": "6039240a07d01f0fc2f544eb",
+            "nome": "Kaitlin Carson"
+        }, {
+            "id": "6039240a63d95ba87bf232e4",
+            "nome": "Lydia Oconnor"
+        }, {
+            "id": "6039240a6268531d4815908a",
+            "nome": "Hatfield Patterson"
+        }, {
+            "id": "6039240a07bbdec1b8a695bc",
+            "nome": "Lambert Simmons"
+        }, {
+            "id": "6039240ac01d3bc349700308",
+            "nome": "Rios Stein"
+        }, {
+            "id": "6039240a3cb7eea6bd693b3d",
+            "nome": "Berta Haney"
+        }, {
+            "id": "6039240a4a67c54e29cb43a1",
+            "nome": "Mitzi Valenzuela"
+        }, {
+            "id": "6039240aae8c347100c8749a",
+            "nome": "Ray Patrick"
+        }, {
+            "id": "6039240ad0cd443738b5ac68",
+            "nome": "Vasquez Bishop"
+        }, {
+            "id": "6039240ae219561e8b0f8512",
+            "nome": "Bradford Boyle"
+        }, {
+            "id": "6039240aa0b87da7c8c2cc87",
+            "nome": "Church Sears"
+        }, {
+            "id": "6039240a08a641f5e7253eeb",
+            "nome": "Jeanette Rojas"
+        }, {
+            "id": "6039240a369fe80ad4045fa7",
+            "nome": "Burns Lyons"
+        }, {
+            "id": "6039240a28b4b9610fc93514",
+            "nome": "Vargas Alexander"
+        }, {
+            "id": "6039240a13c1ed0ff3acc391",
+            "nome": "Sharron Dillon"
+        }, {
+            "id": "6039240ab4a0cd44a3c62657",
+            "nome": "Gordon Ingram"
+        }, {
+            "id": "6039240a94fd3de82bdb86cd",
+            "nome": "Phoebe Merritt"
+        }, {
+            "id": "6039240a2d116d0a9e806511",
+            "nome": "Guerrero Mueller"
+        }, {
+            "id": "6039240ad4bf6a9e074d9340",
+            "nome": "Cross Baird"
+        }, {
+            "id": "6039240ae3d4f6784bf89ec9",
+            "nome": "Lakisha Montgomery"
+        }, {
+            "id": "6039240ad1d831f79250051a",
+            "nome": "Roy Gates"
+        }, {
+            "id": "6039240a3402738d31bcdb6d",
+            "nome": "Marilyn Bridges"
+        }, {
+            "id": "6039240ae19a7b2e9d8243bb",
+            "nome": "Larson Raymond"
+        }, {
+            "id": "6039240a69e7f1b33980b766",
+            "nome": "Norton Graham"
+        }, {
+            "id": "6039240a1fdb21bdfd19cfef",
+            "nome": "Teresa Rios"
+        }, {
+            "id": "6039240a84367c10c68b3e61",
+            "nome": "Tanisha Ballard"
+        }, {
+            "id": "6039240aae08b672cc942ece",
+            "nome": "Kim Tate"
+        }, {
+            "id": "6039240a5b33ac4d2ded3795",
+            "nome": "Vance Cooke"
+        }, {
+            "id": "6039240a3c13d5b10c24468a",
+            "nome": "Roach Jefferson"
+        }, {
+            "id": "6039240a8ac04102f38af634",
+            "nome": "Celia Mann"
+        }, {
+            "id": "6039240a5ec4fa727203b460",
+            "nome": "Caroline Norton"
+        }, {
+            "id": "6039240a2546511df3a187e8",
+            "nome": "Wilma Henderson"
+        }, {
+            "id": "6039240a786756708d9f0018",
+            "nome": "Fitzpatrick Rowe"
+        }, {
+            "id": "6039240a4f354303b593ebec",
+            "nome": "Coleman Kerr"
+        }, {
+            "id": "6039240a193a8d8d8aed8949",
+            "nome": "Odessa Rich"
+        }, {
+            "id": "6039240a7b947fe02dfe3e4a",
+            "nome": "Laverne Mcknight"
+        }, {
+            "id": "6039240a235ae4d2b90a934a",
+            "nome": "Gardner Bright"
+        }, {
+            "id": "6039240acfd35d0c9a310e49",
+            "nome": "Burton Todd"
+        }, {
+            "id": "6039240a8e44140ec905f17c",
+            "nome": "Beck Hansen"
+        }, {
+            "id": "6039240a1a6515d800357e5b",
+            "nome": "Castaneda Conway"
+        }, {
+            "id": "6039240ab7b94069d210204d",
+            "nome": "Fisher Hatfield"
+        }, {
+            "id": "6039240a81e663ac45d556c9",
+            "nome": "Frankie Dixon"
+        }, {
+            "id": "6039240aa3bf4671949c0699",
+            "nome": "Salinas Haley"
+        }, {
+            "id": "6039240a2a20c38e900d58c4",
+            "nome": "Madeline Grimes"
+        }, {
+            "id": "6039240a3df5e5de5c6fed4d",
+            "nome": "Benjamin Lester"
+        }, {
+            "id": "6039240a01c64e4c179943ae",
+            "nome": "Cook Clemons"
+        }, {
+            "id": "6039240ae67702673bfcbcaf",
+            "nome": "Joann Blackwell"
+        }, {
+            "id": "6039240a8300efc2b3fab64c",
+            "nome": "Estrada Graves"
+        }, {
+            "id": "6039240a54eeeb46fe63fc56",
+            "nome": "Hardin Maynard"
+        }, {
+            "id": "6039240acf2473186478bba6",
+            "nome": "Susanne Owen"
+        }, {
+            "id": "6039240a6e7640b32ba8b37c",
+            "nome": "Marylou Gilbert"
+        }, {
+            "id": "6039240af75225d6c2450c2d",
+            "nome": "Powers Jackson"
+        }, {
+            "id": "6039240aead76c2b8454c2cc",
+            "nome": "Ella Ramirez"
+        }, {
+            "id": "6039240a853f059ccec4a13b",
+            "nome": "Paul Rivas"
+        }, {
+            "id": "6039240ab0275d4eec6f1012",
+            "nome": "Cannon Knowles"
+        }, {
+            "id": "6039240a7bdc552132b283c9",
+            "nome": "Russell Pugh"
+        }, {
+            "id": "6039240a5d1f8bd8c3be6b21",
+            "nome": "Gross Watts"
+        }, {
+            "id": "6039240ab36530c388a80a95",
+            "nome": "Jannie Rocha"
+        }, {
+            "id": "6039240a6e51c53332430259",
+            "nome": "Marietta Guerra"
+        }, {
+            "id": "6039240a65c6bdc026e63508",
+            "nome": "Rowe Torres"
+        }, {
+            "id": "6039240a8aad3e98e29180ce",
+            "nome": "Aisha Kemp"
+        }, {
+            "id": "6039240a79c2c7ec10abc665",
+            "nome": "Tamika Buchanan"
+        }, {
+            "id": "6039244ed997bfd6c676033b",
+            "nome": "Sloan Mercado"
+        }, {
+            "id": "6039244ef9dc6702bac2ddc6",
+            "nome": "Lee Riggs"
+        }, {
+            "id": "6039244ea60d9035cb6790a6",
+            "nome": "Mcdaniel Rosales"
+        }, {
+            "id": "6039244e143e329e20dcfbdb",
+            "nome": "Mari Riddle"
+        }, {
+            "id": "6039244efd4a2491de4e3d14",
+            "nome": "Malinda Riley"
+        }, {
+            "id": "6039244e0d5f46ac35ed9dd0",
+            "nome": "Ernestine Hill"
+        }, {
+            "id": "6039244e6ddcee996a8bb48b",
+            "nome": "Berger Maldonado"
+        }, {
+            "id": "6039244ec0e6fd207bd65c73",
+            "nome": "Gould Fry"
+        }, {
+            "id": "6039244ec46883a1d8d5336e",
+            "nome": "Mclean Soto"
+        }, {
+            "id": "6039244ef1d3f09eea516dc4",
+            "nome": "Dorothea Hudson"
+        }, {
+            "id": "6039244e2c9c09c86995a310",
+            "nome": "Ines Rodriquez"
+        }, {
+            "id": "6039244e85c7e42befae6294",
+            "nome": "Terry Reese"
+        }, {
+            "id": "6039244ea63a76afc719e889",
+            "nome": "Gentry Meadows"
+        }, {
+            "id": "6039244e6473551c67de2a7b",
+            "nome": "Stevenson Wiggins"
+        }, {
+            "id": "6039244ed59a22922a3da73c",
+            "nome": "Delacruz Banks"
+        }, {
+            "id": "6039244eca1e4b40c647c0b0",
+            "nome": "Patty Gay"
+        }, {
+            "id": "6039244e2ff81a37ee4fe9d9",
+            "nome": "Warner Holmes"
+        }, {
+            "id": "6039244e37cadacdf4840395",
+            "nome": "Watts Horn"
+        }, {
+            "id": "6039244e9a4dce8ee1474ead",
+            "nome": "Kelsey Nolan"
+        }, {
+            "id": "6039244e845c86dda231684c",
+            "nome": "Mildred Johns"
+        }, {
+            "id": "6039244e6a4b59157137f936",
+            "nome": "Roberta Harris"
+        }, {
+            "id": "6039244e7319c7865df842cd",
+            "nome": "Earnestine Walls"
+        }, {
+            "id": "6039244e7f4509cee716ea17",
+            "nome": "Quinn Humphrey"
+        }, {
+            "id": "6039244e42f0a77ead29bfc8",
+            "nome": "Susanna Berry"
+        }, {
+            "id": "6039244e1e881241dc27d37f",
+            "nome": "Landry Pollard"
+        }, {
+            "id": "6039244e7f0fea7da70f2599",
+            "nome": "Donaldson Gardner"
+        }, {
+            "id": "6039244ee43e089d5eb5ac0c",
+            "nome": "Vivian Neal"
+        }, {
+            "id": "6039244e8ad39499824bf5ed",
+            "nome": "Maritza Washington"
+        }, {
+            "id": "6039244e129200880224265e",
+            "nome": "Tammie Kaufman"
+        }, {
+            "id": "6039244eaeaf8f3a987d814e",
+            "nome": "Nicholson Clay"
+        }, {
+            "id": "6039244e8e031e8757859475",
+            "nome": "Virginia Velez"
+        }, {
+            "id": "6039244e5a9919f3a933da11",
+            "nome": "Constance Butler"
+        }, {
+            "id": "6039244e271940c7610d4845",
+            "nome": "Maria Lancaster"
+        }, {
+            "id": "6039244e3e82d8d4cb90487e",
+            "nome": "Wheeler Porter"
+        }, {
+            "id": "6039244efe066f211f586924",
+            "nome": "Janell Todd"
+        }, {
+            "id": "6039244e702767f6984bd178",
+            "nome": "Kelli Dotson"
+        }, {
+            "id": "6039244e96f14e7c5e937181",
+            "nome": "Robles Stanley"
+        }, {
+            "id": "6039244e9eaf3671dd63a13f",
+            "nome": "Benson Jensen"
+        }, {
+            "id": "6039244e0a728dd3da248d88",
+            "nome": "Mcclain Harrell"
+        }, {
+            "id": "6039244e783debee173b00aa",
+            "nome": "Chandler Roman"
+        }, {
+            "id": "6039244efe82c357230b6110",
+            "nome": "Moran Mclean"
+        }, {
+            "id": "6039244e5f8f18dfe4a9eda3",
+            "nome": "Kitty Frank"
+        }, {
+            "id": "6039244ec456777c1ca772ca",
+            "nome": "Dixon Gonzalez"
+        }, {
+            "id": "6039244edfd4de157556728a",
+            "nome": "Garrison Murray"
+        }, {
+            "id": "6039244ead9bc7cd16d19406",
+            "nome": "Jocelyn George"
+        }, {
+            "id": "6039244e6e7ea96d740d6aa4",
+            "nome": "Dillon Gross"
+        }, {
+            "id": "6039244e2d605e76e0310dc0",
+            "nome": "Booker Gray"
+        }, {
+            "id": "6039244ee35a184f22d130b0",
+            "nome": "Mollie Pierce"
+        }, {
+            "id": "6039244eb0c50a7c2af76149",
+            "nome": "Bernice Sellers"
+        }, {
+            "id": "6039244e2e0249e044a1f136",
+            "nome": "Magdalena Glover"
+        }, {
+            "id": "6039244e546f88087c613de7",
+            "nome": "Mcclure Stewart"
+        }, {
+            "id": "6039244e7fb94cb2f1962b53",
+            "nome": "Debora Rich"
+        }, {
+            "id": "6039244e9a84fdf5174c35ae",
+            "nome": "Lesa Poole"
+        }, {
+            "id": "6039244e5a1d72274551da55",
+            "nome": "Tanya Hebert"
+        }, {
+            "id": "6039244e3d5a32d3b36a1d46",
+            "nome": "Beck Marshall"
+        }, {
+            "id": "6039244e0ad8dec14abaae47",
+            "nome": "Mccall Cox"
+        }, {
+            "id": "6039244ef89f6c6d723ea7a4",
+            "nome": "Roxie Ryan"
+        }, {
+            "id": "6039244e7c5872db74c58231",
+            "nome": "Barlow Rivers"
+        }, {
+            "id": "6039244eba33544282719c0c",
+            "nome": "Hillary Thornton"
+        }, {
+            "id": "6039244ee38d782b888b3eeb",
+            "nome": "Allie Barlow"
+        }, {
+            "id": "6039244e2b6e6252abb2839d",
+            "nome": "Sykes Rojas"
+        }, {
+            "id": "6039244e4131b3dfb581134e",
+            "nome": "Bonita Lindsey"
+        }, {
+            "id": "6039244e0161ed71060ffed4",
+            "nome": "Strong Pate"
+        }, {
+            "id": "6039244e4eb11c32e4213521",
+            "nome": "Chrystal Warner"
+        }, {
+            "id": "6039244eb7132c5ac5488cc3",
+            "nome": "Luella Colon"
+        }, {
+            "id": "6039244ecf6e0a7b6806369f",
+            "nome": "Mcgowan Morrow"
+        }, {
+            "id": "6039244e9b2940f5feaa0390",
+            "nome": "Kramer Battle"
+        }, {
+            "id": "6039244e79fab96206df08ae",
+            "nome": "Cote Cooper"
+        }, {
+            "id": "6039244ea1be71ddc1cfecd6",
+            "nome": "Brennan Hall"
+        }, {
+            "id": "6039244e090bec55970b4824",
+            "nome": "Goodman Rowe"
+        }, {
+            "id": "6039244ea79166206454ceae",
+            "nome": "Jefferson Hooper"
+        }, {
+            "id": "6039244e5ec8961a3f8d11b2",
+            "nome": "Marcy Weiss"
+        }, {
+            "id": "6039244e56e8af0bd5acbcfc",
+            "nome": "Irma Barron"
+        }, {
+            "id": "6039244eba95c99b005249b1",
+            "nome": "Shaw James"
+        }, {
+            "id": "6039244e0cdd84dde3c16fcf",
+            "nome": "Lenore Yang"
+        }, {
+            "id": "6039244e4fafd4a58570e4b1",
+            "nome": "Enid Gillespie"
+        }, {
+            "id": "6039244e97fc2a420da130d9",
+            "nome": "Geneva Torres"
+        }, {
+            "id": "6039244ed25a3954a4a25f8f",
+            "nome": "Stephenson Lloyd"
+        }, {
+            "id": "6039244e4a1490c6d707661b",
+            "nome": "Anna Day"
+        }, {
+            "id": "6039244ea08be1b89685de22",
+            "nome": "Forbes Mack"
+        }, {
+            "id": "6039244e732c8c1e4f56aa92",
+            "nome": "Lambert Delgado"
+        }, {
+            "id": "6039244e6d2861ff99cba2c8",
+            "nome": "Sasha Gill"
+        }, {
+            "id": "6039244e984f867beef868ed",
+            "nome": "Shepard Merrill"
+        }, {
+            "id": "6039244e3142a91781d703b9",
+            "nome": "Murphy Cunningham"
+        }, {
+            "id": "6039244efb67ce8b6611d924",
+            "nome": "Paul Maddox"
+        }, {
+            "id": "6039244e08f52e2a643d0c2e",
+            "nome": "Ball Trujillo"
+        }, {
+            "id": "6039244efc39da6959253d3f",
+            "nome": "Lorna Barrett"
+        }, {
+            "id": "6039244ea658c88b8c2a0f66",
+            "nome": "Wong Spence"
+        }, {
+            "id": "6039244e852548e0c50c48fb",
+            "nome": "Ethel Clarke"
+        }, {
+            "id": "6039244e232e74497ed0edbc",
+            "nome": "Melton Sweeney"
+        }, {
+            "id": "6039244e05322f2111555410",
+            "nome": "Ramsey Galloway"
+        }, {
+            "id": "6039244e49fb7bed87ec69bc",
+            "nome": "Cathy Acevedo"
+        }, {
+            "id": "6039244e5cd1ac964cc4f568",
+            "nome": "Tasha Hernandez"
+        }, {
+            "id": "6039244e15a3a6e9b44d367c",
+            "nome": "Travis Conway"
+        }, {
+            "id": "6039244ed915ebe272579d9e",
+            "nome": "Delgado Donaldson"
+        }, {
+            "id": "6039244e624426a357063a7f",
+            "nome": "Stark Miranda"
+        }, {
+            "id": "6039244e5b021df768c1dc30",
+            "nome": "Laura Rios"
+        }, {
+            "id": "6039244ecda20ce390da5888",
+            "nome": "Koch Gallagher"
+        }, {
+            "id": "6039244ea31b04c27d538686",
+            "nome": "Rodgers Buckley"
+        }, {
+            "id": "6039244ebdb5c14fc5876da0",
+            "nome": "Cornelia Ortega"
+        }
+    ]
+}

@@ -1,0 +1,1328 @@
+@prefix : <http://www.semanticweb.org/pedro/ontologies/2021/1/jsontottl-inf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/pedro/ontologies/2021/1/jsontottl-inf> .
+
+<http://www.semanticweb.org/pedro/ontologies/2021/1/jsontottl-inf> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.di.uminho.pt/prc2021/tpc1#eAlunoDe
+<http://www.di.uminho.pt/prc2021/uc#eAlunoDe> rdf:type owl:ObjectProperty ;
+                                              owl:inverseOf <http://www.di.uminho.pt/prc2021/tpc1#eProfessorDe> .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#eEnsinadaPor
+<http://www.di.uminho.pt/prc2021/tpc1#eEnsinadaPor> rdf:type owl:ObjectProperty ;
+                                                  owl:inverseOf <http://www.di.uminho.pt/prc2021/tpc1#ensina> .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#eProfessorDe
+<http://www.di.uminho.pt/prc2021/tpc1#eProfessorDe> rdf:type owl:ObjectProperty ;
+                                                  owl:propertyChainAxiom ( <http://www.di.uminho.pt/prc2021/tpc1#ensina>
+                                                                         ) .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#ensina
+<http://www.di.uminho.pt/prc2021/tpc1#ensina> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <http://www.di.uminho.pt/prc2021/tpc1#professores> ;
+                                            rdfs:range <http://www.di.uminho.pt/prc2021/tpc1#unidadesCurriculares> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.di.uminho.pt/prc2021/tpc1#anoLetivo
+<http://www.di.uminho.pt/prc2021/tpc1#anoLetivo> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#designacao
+<http://www.di.uminho.pt/prc2021/tpc1#designacao> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#nome
+<http://www.di.uminho.pt/prc2021/tpc1#nome> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.di.uminho.pt/prc2021/tpc1#alunos
+<http://www.di.uminho.pt/prc2021/tpc1#alunos> rdf:type owl:Class ;
+                                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                             owl:someValuesFrom <http://www.di.uminho.pt/prc2021/tpc1#unidadesCurriculares>
+                                                               ] .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#unidadesCurriculares
+<http://www.di.uminho.pt/prc2021/tpc1#unidadesCurriculares> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.di.uminho.pt/prc2021/tpc1#PRC
+<http://www.di.uminho.pt/prc2021/tpc1#PRC> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#unidadesCurriculares> ;
+                                             <http://www.di.uminho.pt/prc2021/tpc1#anoLetivo> "2020/2021" ;
+                                             <http://www.di.uminho.pt/prc2021/tpc1#designacao> "Processamento e Representação de Conhecimento" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#CP
+<http://www.di.uminho.pt/prc2021/tpc1#CP> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#unidadesCurriculares> ;
+                                             <http://www.di.uminho.pt/prc2021/tpc1#anoLetivo> "2020/2021" ;
+                                             <http://www.di.uminho.pt/prc2021/tpc1#designacao> "Computação Paralela" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#SSI
+<http://www.di.uminho.pt/prc2021/tpc1#SSI> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#unidadesCurriculares> ;
+                                             <http://www.di.uminho.pt/prc2021/tpc1#anoLetivo> "2020/2021" ;
+                                             <http://www.di.uminho.pt/prc2021/tpc1#designacao> "Segurança de Sistemas Informáticos" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#VC
+<http://www.di.uminho.pt/prc2021/tpc1#VC> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#unidadesCurriculares> ;
+                                             <http://www.di.uminho.pt/prc2021/tpc1#anoLetivo> "2020/2021" ;
+                                             <http://www.di.uminho.pt/prc2021/tpc1#designacao> "Visão por Computador" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#pn
+<http://www.di.uminho.pt/prc2021/tpc1#pn> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#professores> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#ensina> <http://www.di.uminho.pt/prc2021/tpc1#PRC> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Pedro Neves" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#jn
+<http://www.di.uminho.pt/prc2021/tpc1#jn> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#professores> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#ensina> <http://www.di.uminho.pt/prc2021/tpc1#CP> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Joana Santos" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#jm
+<http://www.di.uminho.pt/prc2021/tpc1#jm> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#professores> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#ensina> <http://www.di.uminho.pt/prc2021/tpc1#SSI> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "José Martins" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#cr
+<http://www.di.uminho.pt/prc2021/tpc1#cr> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#professores> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#ensina> <http://www.di.uminho.pt/prc2021/tpc1#VC> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Cristina Rodrigues" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a0c175a2c220c0cb7
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a0c175a2c220c0cb7> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Chasity Rosario" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a789af464cc8ef741
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a789af464cc8ef741> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Randi Stone" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240aa1c630cbde8fe787
+<http://www.di.uminho.pt/prc2021/tpc1#6039240aa1c630cbde8fe787> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Stephens Nunez" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a481abb944ce67cae
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a481abb944ce67cae> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Jimmie Green" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a3447f19e59e63425
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a3447f19e59e63425> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Freida Moreno" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a963ad86db42e4a9c
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a963ad86db42e4a9c> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Mack Floyd" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a120b7a8bf3adb083
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a120b7a8bf3adb083> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Mae Alvarez" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240ac4ff977fa4aeb012
+<http://www.di.uminho.pt/prc2021/tpc1#6039240ac4ff977fa4aeb012> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Edna Melton" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a5af25f00506e2d78
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a5af25f00506e2d78> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Ollie Cohen" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a8fab0327c3429fa8
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a8fab0327c3429fa8> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Christian Howe" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a8674753e44f22afb
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a8674753e44f22afb> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Kirkland Cooper" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240aa8d6f67117329dd0
+<http://www.di.uminho.pt/prc2021/tpc1#6039240aa8d6f67117329dd0> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Clay Smith" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a929d41c9841ac14b
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a929d41c9841ac14b> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Cooper Holmes" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a4125a7e52b517e07
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a4125a7e52b517e07> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Wells Bauer" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a34c28ddbe1fe01dd
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a34c28ddbe1fe01dd> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Boone Branch" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a35b1ab422a4dc80c
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a35b1ab422a4dc80c> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Weaver Jarvis" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240acec6f3826e354662
+<http://www.di.uminho.pt/prc2021/tpc1#6039240acec6f3826e354662> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Strickland Huffman" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a47a6e49f74422bec
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a47a6e49f74422bec> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Claudine Holloway" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a56e45bea5b25b7f7
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a56e45bea5b25b7f7> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Charity Welch" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a30c3f36d07aec298
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a30c3f36d07aec298> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Conway Moon" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240ac3206efc706880d6
+<http://www.di.uminho.pt/prc2021/tpc1#6039240ac3206efc706880d6> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Duran Duffy" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240ae2cb104d8f1ece3d
+<http://www.di.uminho.pt/prc2021/tpc1#6039240ae2cb104d8f1ece3d> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Lloyd Mayo" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a4a58f488c9f59986
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a4a58f488c9f59986> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Helena Navarro" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a4cc47f1943aef0ed
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a4cc47f1943aef0ed> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Barnett Beach" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a317ab7bfbc273302
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a317ab7bfbc273302> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Bell Mcdowell" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a4d61f42be3739cfa
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a4d61f42be3739cfa> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Alissa Garrison" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240aceb201b0cff82fb3
+<http://www.di.uminho.pt/prc2021/tpc1#6039240aceb201b0cff82fb3> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Gamble Miranda" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240aba38f83830997efb
+<http://www.di.uminho.pt/prc2021/tpc1#6039240aba38f83830997efb> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Kerr Stevenson" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a1727f8b977c19a5c
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a1727f8b977c19a5c> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Clarke Mccoy" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a80400c9e5c802a85
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a80400c9e5c802a85> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Rasmussen Ellison" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a6be0684b9c3cfe40
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a6be0684b9c3cfe40> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Sally Nielsen" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a4ee04081c786acd0
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a4ee04081c786acd0> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Maynard Jenkins" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240aa2e176823f66a496
+<http://www.di.uminho.pt/prc2021/tpc1#6039240aa2e176823f66a496> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Duncan Everett" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240af444106b9eb88624
+<http://www.di.uminho.pt/prc2021/tpc1#6039240af444106b9eb88624> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Stacie West" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240afd232e58c68b6fea
+<http://www.di.uminho.pt/prc2021/tpc1#6039240afd232e58c68b6fea> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Jacqueline Gregory" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240aeb100d8ad2080681
+<http://www.di.uminho.pt/prc2021/tpc1#6039240aeb100d8ad2080681> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Young Decker" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240af89cee8f44d3ce7a
+<http://www.di.uminho.pt/prc2021/tpc1#6039240af89cee8f44d3ce7a> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Blanca Collins" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a0270cb9e6fa5446e
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a0270cb9e6fa5446e> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Jane Finley" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a07d01f0fc2f544eb
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a07d01f0fc2f544eb> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Kaitlin Carson" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a63d95ba87bf232e4
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a63d95ba87bf232e4> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Lydia Oconnor" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a6268531d4815908a
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a6268531d4815908a> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Hatfield Patterson" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a07bbdec1b8a695bc
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a07bbdec1b8a695bc> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Lambert Simmons" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240ac01d3bc349700308
+<http://www.di.uminho.pt/prc2021/tpc1#6039240ac01d3bc349700308> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Rios Stein" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a3cb7eea6bd693b3d
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a3cb7eea6bd693b3d> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Berta Haney" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a4a67c54e29cb43a1
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a4a67c54e29cb43a1> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Mitzi Valenzuela" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240aae8c347100c8749a
+<http://www.di.uminho.pt/prc2021/tpc1#6039240aae8c347100c8749a> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Ray Patrick" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240ad0cd443738b5ac68
+<http://www.di.uminho.pt/prc2021/tpc1#6039240ad0cd443738b5ac68> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Vasquez Bishop" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240ae219561e8b0f8512
+<http://www.di.uminho.pt/prc2021/tpc1#6039240ae219561e8b0f8512> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Bradford Boyle" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240aa0b87da7c8c2cc87
+<http://www.di.uminho.pt/prc2021/tpc1#6039240aa0b87da7c8c2cc87> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Church Sears" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a08a641f5e7253eeb
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a08a641f5e7253eeb> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Jeanette Rojas" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a369fe80ad4045fa7
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a369fe80ad4045fa7> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Burns Lyons" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a28b4b9610fc93514
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a28b4b9610fc93514> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Vargas Alexander" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a13c1ed0ff3acc391
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a13c1ed0ff3acc391> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Sharron Dillon" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240ab4a0cd44a3c62657
+<http://www.di.uminho.pt/prc2021/tpc1#6039240ab4a0cd44a3c62657> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Gordon Ingram" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a94fd3de82bdb86cd
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a94fd3de82bdb86cd> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Phoebe Merritt" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a2d116d0a9e806511
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a2d116d0a9e806511> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Guerrero Mueller" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240ad4bf6a9e074d9340
+<http://www.di.uminho.pt/prc2021/tpc1#6039240ad4bf6a9e074d9340> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Cross Baird" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240ae3d4f6784bf89ec9
+<http://www.di.uminho.pt/prc2021/tpc1#6039240ae3d4f6784bf89ec9> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Lakisha Montgomery" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240ad1d831f79250051a
+<http://www.di.uminho.pt/prc2021/tpc1#6039240ad1d831f79250051a> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Roy Gates" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a3402738d31bcdb6d
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a3402738d31bcdb6d> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Marilyn Bridges" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240ae19a7b2e9d8243bb
+<http://www.di.uminho.pt/prc2021/tpc1#6039240ae19a7b2e9d8243bb> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Larson Raymond" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a69e7f1b33980b766
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a69e7f1b33980b766> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Norton Graham" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a1fdb21bdfd19cfef
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a1fdb21bdfd19cfef> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Teresa Rios" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a84367c10c68b3e61
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a84367c10c68b3e61> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Tanisha Ballard" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240aae08b672cc942ece
+<http://www.di.uminho.pt/prc2021/tpc1#6039240aae08b672cc942ece> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Kim Tate" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a5b33ac4d2ded3795
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a5b33ac4d2ded3795> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Vance Cooke" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a3c13d5b10c24468a
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a3c13d5b10c24468a> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Roach Jefferson" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a8ac04102f38af634
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a8ac04102f38af634> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Celia Mann" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a5ec4fa727203b460
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a5ec4fa727203b460> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Caroline Norton" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a2546511df3a187e8
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a2546511df3a187e8> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Wilma Henderson" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a786756708d9f0018
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a786756708d9f0018> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Fitzpatrick Rowe" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a4f354303b593ebec
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a4f354303b593ebec> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Coleman Kerr" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a193a8d8d8aed8949
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a193a8d8d8aed8949> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Odessa Rich" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a7b947fe02dfe3e4a
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a7b947fe02dfe3e4a> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Laverne Mcknight" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a235ae4d2b90a934a
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a235ae4d2b90a934a> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Gardner Bright" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240acfd35d0c9a310e49
+<http://www.di.uminho.pt/prc2021/tpc1#6039240acfd35d0c9a310e49> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Burton Todd" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a8e44140ec905f17c
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a8e44140ec905f17c> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Beck Hansen" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a1a6515d800357e5b
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a1a6515d800357e5b> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Castaneda Conway" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240ab7b94069d210204d
+<http://www.di.uminho.pt/prc2021/tpc1#6039240ab7b94069d210204d> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Fisher Hatfield" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a81e663ac45d556c9
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a81e663ac45d556c9> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Frankie Dixon" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240aa3bf4671949c0699
+<http://www.di.uminho.pt/prc2021/tpc1#6039240aa3bf4671949c0699> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Salinas Haley" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a2a20c38e900d58c4
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a2a20c38e900d58c4> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Madeline Grimes" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a3df5e5de5c6fed4d
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a3df5e5de5c6fed4d> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Benjamin Lester" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a01c64e4c179943ae
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a01c64e4c179943ae> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Cook Clemons" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240ae67702673bfcbcaf
+<http://www.di.uminho.pt/prc2021/tpc1#6039240ae67702673bfcbcaf> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Joann Blackwell" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a8300efc2b3fab64c
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a8300efc2b3fab64c> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Estrada Graves" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a54eeeb46fe63fc56
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a54eeeb46fe63fc56> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Hardin Maynard" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240acf2473186478bba6
+<http://www.di.uminho.pt/prc2021/tpc1#6039240acf2473186478bba6> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Susanne Owen" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a6e7640b32ba8b37c
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a6e7640b32ba8b37c> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Marylou Gilbert" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240af75225d6c2450c2d
+<http://www.di.uminho.pt/prc2021/tpc1#6039240af75225d6c2450c2d> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Powers Jackson" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240aead76c2b8454c2cc
+<http://www.di.uminho.pt/prc2021/tpc1#6039240aead76c2b8454c2cc> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Ella Ramirez" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a853f059ccec4a13b
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a853f059ccec4a13b> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Paul Rivas" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240ab0275d4eec6f1012
+<http://www.di.uminho.pt/prc2021/tpc1#6039240ab0275d4eec6f1012> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Cannon Knowles" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a7bdc552132b283c9
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a7bdc552132b283c9> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Russell Pugh" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a5d1f8bd8c3be6b21
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a5d1f8bd8c3be6b21> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Gross Watts" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240ab36530c388a80a95
+<http://www.di.uminho.pt/prc2021/tpc1#6039240ab36530c388a80a95> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Jannie Rocha" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a6e51c53332430259
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a6e51c53332430259> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Marietta Guerra" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a65c6bdc026e63508
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a65c6bdc026e63508> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Rowe Torres" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a8aad3e98e29180ce
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a8aad3e98e29180ce> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Aisha Kemp" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039240a79c2c7ec10abc665
+<http://www.di.uminho.pt/prc2021/tpc1#6039240a79c2c7ec10abc665> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Tamika Buchanan" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244ed997bfd6c676033b
+<http://www.di.uminho.pt/prc2021/tpc1#6039244ed997bfd6c676033b> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Sloan Mercado" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244ef9dc6702bac2ddc6
+<http://www.di.uminho.pt/prc2021/tpc1#6039244ef9dc6702bac2ddc6> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Lee Riggs" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244ea60d9035cb6790a6
+<http://www.di.uminho.pt/prc2021/tpc1#6039244ea60d9035cb6790a6> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Mcdaniel Rosales" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e143e329e20dcfbdb
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e143e329e20dcfbdb> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Mari Riddle" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244efd4a2491de4e3d14
+<http://www.di.uminho.pt/prc2021/tpc1#6039244efd4a2491de4e3d14> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Malinda Riley" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e0d5f46ac35ed9dd0
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e0d5f46ac35ed9dd0> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Ernestine Hill" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e6ddcee996a8bb48b
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e6ddcee996a8bb48b> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Berger Maldonado" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244ec0e6fd207bd65c73
+<http://www.di.uminho.pt/prc2021/tpc1#6039244ec0e6fd207bd65c73> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Gould Fry" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244ec46883a1d8d5336e
+<http://www.di.uminho.pt/prc2021/tpc1#6039244ec46883a1d8d5336e> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Mclean Soto" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244ef1d3f09eea516dc4
+<http://www.di.uminho.pt/prc2021/tpc1#6039244ef1d3f09eea516dc4> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Dorothea Hudson" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e2c9c09c86995a310
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e2c9c09c86995a310> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Ines Rodriquez" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e85c7e42befae6294
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e85c7e42befae6294> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Terry Reese" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244ea63a76afc719e889
+<http://www.di.uminho.pt/prc2021/tpc1#6039244ea63a76afc719e889> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Gentry Meadows" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e6473551c67de2a7b
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e6473551c67de2a7b> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Stevenson Wiggins" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244ed59a22922a3da73c
+<http://www.di.uminho.pt/prc2021/tpc1#6039244ed59a22922a3da73c> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Delacruz Banks" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244eca1e4b40c647c0b0
+<http://www.di.uminho.pt/prc2021/tpc1#6039244eca1e4b40c647c0b0> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Patty Gay" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e2ff81a37ee4fe9d9
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e2ff81a37ee4fe9d9> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Warner Holmes" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e37cadacdf4840395
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e37cadacdf4840395> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Watts Horn" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e9a4dce8ee1474ead
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e9a4dce8ee1474ead> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Kelsey Nolan" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e845c86dda231684c
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e845c86dda231684c> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Mildred Johns" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e6a4b59157137f936
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e6a4b59157137f936> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Roberta Harris" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e7319c7865df842cd
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e7319c7865df842cd> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Earnestine Walls" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e7f4509cee716ea17
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e7f4509cee716ea17> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Quinn Humphrey" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e42f0a77ead29bfc8
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e42f0a77ead29bfc8> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Susanna Berry" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e1e881241dc27d37f
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e1e881241dc27d37f> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Landry Pollard" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e7f0fea7da70f2599
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e7f0fea7da70f2599> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Donaldson Gardner" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244ee43e089d5eb5ac0c
+<http://www.di.uminho.pt/prc2021/tpc1#6039244ee43e089d5eb5ac0c> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Vivian Neal" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e8ad39499824bf5ed
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e8ad39499824bf5ed> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Maritza Washington" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e129200880224265e
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e129200880224265e> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Tammie Kaufman" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244eaeaf8f3a987d814e
+<http://www.di.uminho.pt/prc2021/tpc1#6039244eaeaf8f3a987d814e> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Nicholson Clay" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e8e031e8757859475
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e8e031e8757859475> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Virginia Velez" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e5a9919f3a933da11
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e5a9919f3a933da11> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Constance Butler" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e271940c7610d4845
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e271940c7610d4845> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Maria Lancaster" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e3e82d8d4cb90487e
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e3e82d8d4cb90487e> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Wheeler Porter" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244efe066f211f586924
+<http://www.di.uminho.pt/prc2021/tpc1#6039244efe066f211f586924> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Janell Todd" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e702767f6984bd178
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e702767f6984bd178> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Kelli Dotson" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e96f14e7c5e937181
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e96f14e7c5e937181> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Robles Stanley" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e9eaf3671dd63a13f
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e9eaf3671dd63a13f> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Benson Jensen" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e0a728dd3da248d88
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e0a728dd3da248d88> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Mcclain Harrell" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e783debee173b00aa
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e783debee173b00aa> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Chandler Roman" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244efe82c357230b6110
+<http://www.di.uminho.pt/prc2021/tpc1#6039244efe82c357230b6110> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Moran Mclean" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e5f8f18dfe4a9eda3
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e5f8f18dfe4a9eda3> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Kitty Frank" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244ec456777c1ca772ca
+<http://www.di.uminho.pt/prc2021/tpc1#6039244ec456777c1ca772ca> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Dixon Gonzalez" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244edfd4de157556728a
+<http://www.di.uminho.pt/prc2021/tpc1#6039244edfd4de157556728a> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Garrison Murray" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244ead9bc7cd16d19406
+<http://www.di.uminho.pt/prc2021/tpc1#6039244ead9bc7cd16d19406> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Jocelyn George" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e6e7ea96d740d6aa4
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e6e7ea96d740d6aa4> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Dillon Gross" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e2d605e76e0310dc0
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e2d605e76e0310dc0> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Booker Gray" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244ee35a184f22d130b0
+<http://www.di.uminho.pt/prc2021/tpc1#6039244ee35a184f22d130b0> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Mollie Pierce" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244eb0c50a7c2af76149
+<http://www.di.uminho.pt/prc2021/tpc1#6039244eb0c50a7c2af76149> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Bernice Sellers" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e2e0249e044a1f136
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e2e0249e044a1f136> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Magdalena Glover" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e546f88087c613de7
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e546f88087c613de7> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Mcclure Stewart" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e7fb94cb2f1962b53
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e7fb94cb2f1962b53> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Debora Rich" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e9a84fdf5174c35ae
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e9a84fdf5174c35ae> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Lesa Poole" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e5a1d72274551da55
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e5a1d72274551da55> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Tanya Hebert" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e3d5a32d3b36a1d46
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e3d5a32d3b36a1d46> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Beck Marshall" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e0ad8dec14abaae47
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e0ad8dec14abaae47> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Mccall Cox" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244ef89f6c6d723ea7a4
+<http://www.di.uminho.pt/prc2021/tpc1#6039244ef89f6c6d723ea7a4> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Roxie Ryan" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e7c5872db74c58231
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e7c5872db74c58231> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Barlow Rivers" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244eba33544282719c0c
+<http://www.di.uminho.pt/prc2021/tpc1#6039244eba33544282719c0c> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Hillary Thornton" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244ee38d782b888b3eeb
+<http://www.di.uminho.pt/prc2021/tpc1#6039244ee38d782b888b3eeb> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Allie Barlow" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e2b6e6252abb2839d
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e2b6e6252abb2839d> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Sykes Rojas" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e4131b3dfb581134e
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e4131b3dfb581134e> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Bonita Lindsey" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e0161ed71060ffed4
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e0161ed71060ffed4> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Strong Pate" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e4eb11c32e4213521
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e4eb11c32e4213521> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Chrystal Warner" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244eb7132c5ac5488cc3
+<http://www.di.uminho.pt/prc2021/tpc1#6039244eb7132c5ac5488cc3> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Luella Colon" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244ecf6e0a7b6806369f
+<http://www.di.uminho.pt/prc2021/tpc1#6039244ecf6e0a7b6806369f> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Mcgowan Morrow" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e9b2940f5feaa0390
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e9b2940f5feaa0390> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Kramer Battle" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e79fab96206df08ae
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e79fab96206df08ae> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Cote Cooper" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244ea1be71ddc1cfecd6
+<http://www.di.uminho.pt/prc2021/tpc1#6039244ea1be71ddc1cfecd6> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Brennan Hall" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e090bec55970b4824
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e090bec55970b4824> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Goodman Rowe" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244ea79166206454ceae
+<http://www.di.uminho.pt/prc2021/tpc1#6039244ea79166206454ceae> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Jefferson Hooper" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e5ec8961a3f8d11b2
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e5ec8961a3f8d11b2> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Marcy Weiss" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e56e8af0bd5acbcfc
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e56e8af0bd5acbcfc> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Irma Barron" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244eba95c99b005249b1
+<http://www.di.uminho.pt/prc2021/tpc1#6039244eba95c99b005249b1> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Shaw James" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e0cdd84dde3c16fcf
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e0cdd84dde3c16fcf> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Lenore Yang" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e4fafd4a58570e4b1
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e4fafd4a58570e4b1> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Enid Gillespie" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e97fc2a420da130d9
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e97fc2a420da130d9> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Geneva Torres" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244ed25a3954a4a25f8f
+<http://www.di.uminho.pt/prc2021/tpc1#6039244ed25a3954a4a25f8f> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Stephenson Lloyd" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e4a1490c6d707661b
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e4a1490c6d707661b> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Anna Day" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244ea08be1b89685de22
+<http://www.di.uminho.pt/prc2021/tpc1#6039244ea08be1b89685de22> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Forbes Mack" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e732c8c1e4f56aa92
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e732c8c1e4f56aa92> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Lambert Delgado" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e6d2861ff99cba2c8
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e6d2861ff99cba2c8> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Sasha Gill" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e984f867beef868ed
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e984f867beef868ed> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Shepard Merrill" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e3142a91781d703b9
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e3142a91781d703b9> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Murphy Cunningham" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244efb67ce8b6611d924
+<http://www.di.uminho.pt/prc2021/tpc1#6039244efb67ce8b6611d924> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Paul Maddox" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e08f52e2a643d0c2e
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e08f52e2a643d0c2e> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Ball Trujillo" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244efc39da6959253d3f
+<http://www.di.uminho.pt/prc2021/tpc1#6039244efc39da6959253d3f> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Lorna Barrett" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244ea658c88b8c2a0f66
+<http://www.di.uminho.pt/prc2021/tpc1#6039244ea658c88b8c2a0f66> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Wong Spence" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e852548e0c50c48fb
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e852548e0c50c48fb> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Ethel Clarke" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e232e74497ed0edbc
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e232e74497ed0edbc> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Melton Sweeney" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e05322f2111555410
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e05322f2111555410> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Ramsey Galloway" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e49fb7bed87ec69bc
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e49fb7bed87ec69bc> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Cathy Acevedo" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e5cd1ac964cc4f568
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e5cd1ac964cc4f568> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Tasha Hernandez" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e15a3a6e9b44d367c
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e15a3a6e9b44d367c> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Travis Conway" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244ed915ebe272579d9e
+<http://www.di.uminho.pt/prc2021/tpc1#6039244ed915ebe272579d9e> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Delgado Donaldson" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e624426a357063a7f
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e624426a357063a7f> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Stark Miranda" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244e5b021df768c1dc30
+<http://www.di.uminho.pt/prc2021/tpc1#6039244e5b021df768c1dc30> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Laura Rios" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244ecda20ce390da5888
+<http://www.di.uminho.pt/prc2021/tpc1#6039244ecda20ce390da5888> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Koch Gallagher" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244ea31b04c27d538686
+<http://www.di.uminho.pt/prc2021/tpc1#6039244ea31b04c27d538686> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Rodgers Buckley" .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc1#6039244ebdb5c14fc5876da0
+<http://www.di.uminho.pt/prc2021/tpc1#6039244ebdb5c14fc5876da0> rdf:type owl:NamedIndividual ,
+                                                 <http://www.di.uminho.pt/prc2021/tpc1#alunos> ;
+                                        <http://www.di.uminho.pt/prc2021/tpc1#nome> "Cornelia Ortega" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,54 @@
+{
+  unidadesCurriculares: [
+    {
+      sigla: 'PRC',
+      designacao: 'Processamento e Representação de Conhecimento',
+      anoLetivo: '2020/2021'
+    },
+    {
+      sigla: 'CP',
+      designacao: 'Computação Paralela',
+      anoLetivo: '2020/2021'
+    },
+    {
+      sigla: 'SSI',
+      designacao: 'Segurança de Sistemas Informáticos',
+      anoLetivo: '2020/2021'
+    },
+    {
+      sigla: 'VC',
+      designacao: 'Visão por Computador',
+      anoLetivo: '2020/2021'
+    }
+  ],
+  professores: [
+    {
+      sigla: 'pn',
+      nome: 'Pedro Neves',
+      ensina: 'PRC'
+    },
+    {
+      sigla: 'jn',
+      nome: 'Joana Santos',
+      ensina: 'CP'
+    },
+    {
+      sigla: 'jm',
+      nome: 'José Martins',
+      ensina: 'SSI'
+    },
+    {
+      sigla: 'cr',
+      nome: 'Cristina Rodrigues',
+      ensina: 'VC'
+    }
+  ],
+  alunos: [
+    {
+      'repeat(100)': {
+        id: '{{objectId()}}',
+        nome: '{{firstName()}} {{surname()}}'
+      }
+    }
+  ]
+}
