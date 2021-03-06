@@ -1,0 +1,194 @@
+@prefix : <http://www.di.uminho.pt/prc2021/arquivo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.di.uminho.pt/prc2021/arquivo> .
+
+<http://www.di.uminho.pt/prc2021/arquivo> rdf:type owl:Ontology ;
+                                           owl:versionIRI <http://www.di.uminho.pt/prc2021/arquivo/v1> ;
+                                           rdfs:comment "Ontologia para um arquivo de musicas digitais" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.di.uminho.pt/prc2021/arquivo#compôs
+:compôs rdf:type owl:ObjectProperty ;
+        owl:inverseOf :foiComposta ;
+        rdfs:domain :Compositor ;
+        rdfs:range :Obra .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#foiComposta
+:foiComposta rdf:type owl:ObjectProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#refere
+:refere rdf:type owl:ObjectProperty ;
+        owl:inverseOf :segue ;
+        rdfs:domain :Partitura ;
+        rdfs:range :Instrumento .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#segue
+:segue rdf:type owl:ObjectProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#temVideo
+:temVideo rdf:type owl:ObjectProperty ;
+          rdfs:domain :Obra ;
+          rdfs:range :Video .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#utiliza
+:utiliza rdf:type owl:ObjectProperty ;
+         owl:inverseOf :utilizado .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#utilizado
+:utilizado rdf:type owl:ObjectProperty ;
+           rdfs:domain :Instrumento ;
+           rdfs:range :Obra .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.di.uminho.pt/prc2021/arquivo#afinacao
+:afinacao rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#arranjo
+:arranjo rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#clave
+:clave rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#designacao
+:designacao rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#editado
+:editado rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#href
+:href rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#nome
+:nome rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#path
+:path rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#subtitulo
+:subtitulo rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#tipo
+:tipo rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#titulo
+:titulo rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#type
+:type rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#voz
+:voz rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.di.uminho.pt/prc2021/arquivo#Compositor
+:Compositor rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :compôs ;
+                              owl:someValuesFrom :Obra
+                            ] .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#Inf-relacionada
+:Inf-relacionada rdf:type owl:Class .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#Instrumento
+:Instrumento rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :utilizado ;
+                               owl:someValuesFrom :Obra
+                             ] .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#Obra
+:Obra rdf:type owl:Class .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#Partitura
+:Partitura rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :refere ;
+                             owl:someValuesFrom :Instrumento
+                           ] .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#Video
+:Video rdf:type owl:Class ;
+       rdfs:subClassOf :Inf-relacionada .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.di.uminho.pt/prc2021/arquivo#ABBA
+:ABBA rdf:type owl:NamedIndividual ,
+               :Compositor ;
+      :compôs :m28 ;
+      :nome "ABBA" .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#AbbaMia-all
+:AbbaMia-all rdf:type owl:NamedIndividual ,
+                      :Partitura ;
+             :refere :All ;
+             :path "AbbaMia-all.pdf" ;
+             :type "PDF" .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#All
+:All rdf:type owl:NamedIndividual ,
+              :Instrumento ;
+     :utilizado :m28 ;
+     :designacao "All" .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#m28
+:m28 rdf:type owl:NamedIndividual ,
+              :Obra ;
+     :temVideo :video_m28 ;
+     :arranjo "Luís Cardoso" ;
+     :tipo "Ligeiro/Fantasia" ;
+     :titulo "Abba Mia" .
+
+
+###  http://www.di.uminho.pt/prc2021/arquivo#video_m28
+:video_m28 rdf:type owl:NamedIndividual ,
+                    :Video ;
+           :href "https://www.youtube.com/watch?v=73LT5ltTB-I" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
