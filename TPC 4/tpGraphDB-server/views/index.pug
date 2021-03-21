@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    .w3-container.w3-section.w3-card-4
+        header.w3-container.w3-purple
+            h3 GraphDB: Tabela Periódica
+        .w3-container
+            h4 Esta aplicação web permite observar 3 conceitos da Tabela Periódica, no qual foi construida com uma ontologia RDF que se localiza num repositório da GraphDB
+            ul
+              li
+                a(href='/elements') Elementos
+              li 
+                a(href='/groups') Grupos 
+              li 
+                a(href='/periods') Periodos 
+            h2 Referências: 
+            ul
+              footer(style="color:blue;") 
+                a(href='http://localhost:7200/') GraphDB Free
+              footer(style="color:blue;") 
+                a(href='https://www4.di.uminho.pt/~jcr/AULAS/didac/RepFichas/site/fichas/f17.html') Ficha f17: SPARQL
+            
+            footer(class="w3-container w3-center")
+                p Pedro Afonso Rodrigues Santos - PG42847

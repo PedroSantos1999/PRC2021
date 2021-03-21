@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    .w3-container.w3-section.w3-card-4
+        header.w3-container.w3-orange
+            h3 Lista de Periodos
+        .w3-container
+            h4 Um Periodo na Tabela Periódica é uma linha de elementos químicos. Todos os elementos numa linha têm o mesmo número de camadas de eletrões. Cada elemento a seguir num período tem um prótão a mais e é menos metálico do que o seu predecessor. Dispostos dessa forma, os grupos de elementos na mesma coluna têm propriedades químicas e físicas semelhantes, refletindo a lei periódica. Para ver as propriedades de um periodo, basta clicar no id.
+        table.w3-table-all.w3-section
+            thead
+                tr(class="w3-black")
+                    th(style="text-align:center") ID
+                    th(style="text-align:center") Número
+            tbody
+                each p in periods 
+                    tr
+                        td(style="text-align:center") :
+                            a(href="http://localhost:8810/periods/" + p.id)=p.id
+                        td(style="text-align:center")=p.number 
+        .w3-container
+        button(class="w3-button w3-black w3-round" style="left: 0; bottom: 0; width: 100%; text-align: center")
+            a(href="/") Página Inicial

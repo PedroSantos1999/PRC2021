@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    .w3-container.w3-section
+        header.w3-container.w3-cyan
+            h2 Grupo #{number} - #{name}
+    .w3-container
+        table.w3-table-all.w3-section
+            thead
+                tr(class="w3-black")
+                    th(style="text-align:center") ID
+                    th(style="text-align:center") Simbolo
+            tbody
+                each g in group 
+                    if (g.o)
+                        if (g.p == 'element')
+                            tr
+                                td(style="text-align:center") :
+                                    a(href="http://localhost:8810/elements/" + g.o)=g.o
+                                td(style="text-align:center")=g.o
+
+        .w3-container
+        button(class="w3-button w3-black w3-round" style="left: 0; bottom: 0; width: 100%; text-align: center")
+            a(href='/groups') Lista de Grupos

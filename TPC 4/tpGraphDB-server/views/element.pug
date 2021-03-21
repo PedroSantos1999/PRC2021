@@ -1,0 +1,48 @@
+extends layout
+
+block content
+    .w3-container.w3-section
+        header.w3-container.w3-pink
+            h3 Elemento #{id}
+        .w3-container
+        each e in element
+            table.w3-table-all.w3-section
+                tr
+                    th Número Atómico 
+                        td= e.anumber
+                tr                            
+                    th Massa Atómica
+                        td= e.aweight
+                tr
+                    th Bloco 
+                        td= e.block
+                tr
+                    th Chemical Abstracts Service (CAS)
+                        td= e.casregid
+                tr
+                    th Classificação
+                        td= e.classification
+                tr 
+                    th Cor
+                        td= e.color
+                tr
+                    th Grupo
+                        td
+                            a(href='/groups/'+e.group)= e.group
+                tr
+                    th Nome
+                        td= e.name
+                tr
+                    th Periodo
+                        td
+                            a(href='/periods/'+e.period)= e.period
+                tr
+                    th Estado Normal
+                        td= e.standardstate 
+                tr
+                    th Símbolo
+                        td= e.symbol
+
+            .w3-container
+            button(class="w3-button w3-black w3-round" style="left: 0; bottom: 0; width: 100%; text-align: center")
+                a(href='/elements') Lista de Elementos    

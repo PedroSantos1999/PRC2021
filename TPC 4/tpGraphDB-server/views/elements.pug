@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    .w3-container.w3-section.w3-card-4
+        header.w3-container.w3-pink
+            h3 Lista de Elementos
+        .w3-container
+            h4 Um Elemento é uma substância pura que consiste apenas em átomos e todos têm o mesmo número de protões nos seus núcleos atómicos. Ao contrário dos compostos químicos, os elementos químicos não podem ser decompostos em substâncias mais simples por meios químicos. O número de protões no núcleo é a propriedade definitiva de um elemento e é conhecido como um número atômico. Todos os átomos com o mesmo número atômico são átomos do mesmo elemento. Para ver as propriedades de um elemento, basta clicar no id.             
+        table.w3-table-all.w3-section
+            thead
+                tr(class="w3-black")
+                    th(style="text-align:center") ID
+                    th(style="text-align:center") Número Atómico
+                    th(style="text-align:center") Simbolo
+                    th(style="text-align:center") Nome
+            tbody
+                each e in elements 
+                    tr
+                        td(style="text-align:center") :
+                            a(href="http://localhost:8810/elements/" + e.id)=e.id
+                        td(style="text-align:center")=e.anumber
+                        td(style="text-align:center")=e.simb
+                        td(style="text-align:center")=e.name 
+        .w3-container
+        button(class="w3-button w3-black w3-round" style="left: 0; bottom: 0; width: 100%; text-align: center")
+            a(href="/") Página Inicial

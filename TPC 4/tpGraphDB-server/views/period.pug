@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    .w3-container.w3-section
+        header.w3-container.w3-orange
+            h2 Periodo #{id}
+    .w3-container
+        table.w3-table-all.w3-section
+            thead
+                tr(class="w3-black")
+                    th(style="text-align:center") ID
+                    th(style="text-align:center") Simbolo
+            tbody
+                each p in period 
+                    tr
+                        td(style="text-align:center") :
+                           a(href="http://localhost:8810/elements/" + p.element)=p.element
+                        td(style="text-align:center")=p.element
+
+        .w3-container
+        button(class="w3-button w3-black w3-round" style="left: 0; bottom: 0; width: 100%; text-align: center")
+            a(href='/periods') Lista de Periodos

@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    .w3-container.w3-section.w3-card-4
+        header.w3-container.w3-cyan
+            h3 Lista de Grupos
+        .w3-container
+            h4 Um Grupo é uma coluna de elementos na Tabela Periódica dos elementos químicos. Existem no total 18 grupos. As colunas do bloco f (entre os grupos 2 e 3) não estão numeradas. Os elementos num grupo têm características físicas ou químicas semelhantes às camadas de eletrões mais externas dos seus átomos, isto é, a mesma carga de núcleo, porque a maioria das propriedades químicas são dominadas pela localização orbital do eletrão mais externo. Para ver as propriedades de um grupo, basta clicar no id.
+        table.w3-table-all.w3-section
+            thead
+                tr(class="w3-black")
+                    th(style="text-align:center") ID
+                    th(style="text-align:center") Número
+                    th(style="text-align:center") Nome
+            tbody
+                each g in groups 
+                    tr
+                        td(style="text-align:center") :
+                            a(href="http://localhost:8810/groups/" + g.id)=g.id
+                        td(style="text-align:center")=g.number
+                        td(style="text-align:center")=g.name 
+        .w3-container
+        button(class="w3-button w3-black w3-round" style="left: 0; bottom: 0; width: 100%; text-align: center")
+            a(href="/") Página Inicial
