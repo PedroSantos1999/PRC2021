@@ -1,0 +1,401 @@
+@prefix : <http://www.di.uminho.pt/prc2021/tpc5#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.di.uminho.pt/prc2021/tpc5> .
+
+<http://www.di.uminho.pt/prc2021/tpc5> rdf:type owl:Ontology ;
+                                        owl:versionIRI <http://www.di.uminho.pt/prc2021/tpc5/v1> ;
+                                        rdfs:comment "Ontologia para trabalho de casa 5" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.di.uminho.pt/prc2021/tpc5#edits
+:edits rdf:type owl:ObjectProperty ;
+       owl:inverseOf :refersEditors ;
+       rdfs:domain :Editor ;
+       rdfs:range :Bibliography .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#hasFiles
+:hasFiles rdf:type owl:ObjectProperty ;
+          rdfs:domain :Bibliography ;
+          rdfs:range :PDF .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#refersAuthors
+:refersAuthors rdf:type owl:ObjectProperty ;
+               owl:inverseOf :writes ;
+               rdfs:domain :Author ;
+               rdfs:range :Bibliography .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#refersEditors
+:refersEditors rdf:type owl:ObjectProperty ;
+               rdfs:domain :Editor ;
+               rdfs:range :Bibliography .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#writes
+:writes rdf:type owl:ObjectProperty ;
+        rdfs:domain :Author ;
+        rdfs:range :Bibliography .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.di.uminho.pt/prc2021/tpc5#address
+:address rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#booktitle
+:booktitle rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#chapter
+:chapter rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#doi
+:doi rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#howpublished
+:howpublished rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#isbn
+:isbn rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#issn
+:issn rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#journal
+:journal rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#month
+:month rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#name
+:name rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#number
+:number rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#pages
+:pages rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#publisher
+:publisher rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#school
+:school rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#title
+:title rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#uri
+:uri rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#url
+:url rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#volume
+:volume rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#year
+:year rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.di.uminho.pt/prc2021/tpc5#Article
+:Article rdf:type owl:Class ;
+         rdfs:subClassOf :Bibliography ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :journal ;
+                           owl:someValuesFrom xsd:string
+                         ] .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#Author
+:Author rdf:type owl:Class ;
+        owl:equivalentClass [ owl:intersectionOf ( :Person
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :writes ;
+                                                     owl:someValuesFrom :Bibliography
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :name ;
+                          owl:someValuesFrom xsd:string
+                        ] .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#Bibliography
+:Bibliography rdf:type owl:Class .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#Book
+:Book rdf:type owl:Class ;
+      rdfs:subClassOf :Bibliography ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :address ;
+                        owl:someValuesFrom xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :month ;
+                        owl:someValuesFrom xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :publisher ;
+                        owl:someValuesFrom xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :title ;
+                        owl:someValuesFrom xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :year ;
+                        owl:someValuesFrom xsd:string
+                      ] .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#Deliverables
+:Deliverables rdf:type owl:Class .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#Editor
+:Editor rdf:type owl:Class ;
+        owl:equivalentClass [ owl:intersectionOf ( :Person
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :edits ;
+                                                     owl:someValuesFrom :Bibliography
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :name ;
+                          owl:someValuesFrom xsd:string
+                        ] .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#Inbook
+:Inbook rdf:type owl:Class ;
+        rdfs:subClassOf :Bibliography ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :chapter ;
+                          owl:someValuesFrom xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :month ;
+                          owl:someValuesFrom xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :pages ;
+                          owl:someValuesFrom xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :publisher ;
+                          owl:someValuesFrom xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :title ;
+                          owl:someValuesFrom xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :year ;
+                          owl:someValuesFrom xsd:string
+                        ] .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#Inproceedings
+:Inproceedings rdf:type owl:Class ;
+               rdfs:subClassOf :Bibliography ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :booktitle ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :title ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :year ;
+                                 owl:someValuesFrom xsd:string
+                               ] .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#Masterthesis
+:Masterthesis rdf:type owl:Class ;
+              rdfs:subClassOf :Bibliography ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :month ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :school ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :title ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :year ;
+                                owl:someValuesFrom xsd:string
+                              ] .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#Misc
+:Misc rdf:type owl:Class ;
+      rdfs:subClassOf :Bibliography ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :howpublished ;
+                        owl:someValuesFrom xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :title ;
+                        owl:someValuesFrom xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :year ;
+                        owl:someValuesFrom xsd:string
+                      ] .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#PDF
+:PDF rdf:type owl:Class ;
+     rdfs:subClassOf :Deliverables ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :url ;
+                       owl:someValuesFrom xsd:string
+                     ] .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#Person
+:Person rdf:type owl:Class .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#Phdthesis
+:Phdthesis rdf:type owl:Class ;
+           rdfs:subClassOf :Bibliography ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :address ;
+                             owl:someValuesFrom xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :doi ;
+                             owl:someValuesFrom xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :month ;
+                             owl:someValuesFrom xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :school ;
+                             owl:someValuesFrom xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :title ;
+                             owl:someValuesFrom xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :year ;
+                             owl:someValuesFrom xsd:string
+                           ] .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#Proceedings
+:Proceedings rdf:type owl:Class ;
+             rdfs:subClassOf :Bibliography ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :address ;
+                               owl:someValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :doi ;
+                               owl:someValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :month ;
+                               owl:someValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :title ;
+                               owl:someValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :year ;
+                               owl:someValuesFrom xsd:string
+                             ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.di.uminho.pt/prc2021/tpc5#ap
+:ap rdf:type owl:NamedIndividual ,
+             :Author ;
+    :name "André Pereira"^^xsd:string .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#cisti2017
+:cisti2017 rdf:type owl:NamedIndividual ,
+                    :Inproceedings ;
+           :refersAuthors :ap ,
+                          :jcr ,
+                          :lf ,
+                          :mf ;
+           :address "ISCTE, Lisboa, Portugal"^^xsd:string ;
+           :booktitle "12th Iberian Conference on Information Systems and Technologies (CISTI),"^^xsd:string ;
+           :doi "http://hdl.handle.net/1822/46093"^^xsd:string ;
+           :month "06.24"^^xsd:string ;
+           :title "RODA-in: A generic tool for the mass creation of Submission Information Packages"^^xsd:string ;
+           :year 2017 .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#jcr
+:jcr rdf:type owl:NamedIndividual ,
+              :Author ;
+     :name "José Carlos Ramalho"^^xsd:string .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#lf
+:lf rdf:type owl:NamedIndividual ,
+             :Author ;
+    :name "Luis Faria"^^xsd:string .
+
+
+###  http://www.di.uminho.pt/prc2021/tpc5#mf
+:mf rdf:type owl:NamedIndividual ,
+             :Author ;
+    :name "Miguel Ferreira"^^xsd:string .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
