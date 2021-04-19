@@ -1,0 +1,680 @@
+@prefix : <http://www.semanticweb.org/pedro/ontologies/2021/3/untitled-ontology-28#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.di.uminho.pt/Afericao> .
+
+<http://www.di.uminho.pt/Afericao> rdf:type owl:Ontology ;
+                                    owl:versionIRI <http://www.di.uminho.pt/Afericao/v1> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.di.uminho.pt/Afericao#mesPago
+:mesPago rdf:type owl:ObjectProperty ;
+         owl:inverseOf :temPagado .
+
+
+###  http://www.di.uminho.pt/Afericao#recebeDespesa
+:recebeDespesa rdf:type owl:ObjectProperty ;
+               owl:inverseOf :temDespesa .
+
+
+###  http://www.di.uminho.pt/Afericao#recebeReceita
+:recebeReceita rdf:type owl:ObjectProperty ;
+               owl:inverseOf :temReceita .
+
+
+###  http://www.di.uminho.pt/Afericao#temDespesa
+:temDespesa rdf:type owl:ObjectProperty ;
+            rdfs:domain :Despesas ;
+            rdfs:range :Fornecedor .
+
+
+###  http://www.di.uminho.pt/Afericao#temPagado
+:temPagado rdf:type owl:ObjectProperty ;
+           rdfs:domain :Mês ;
+           rdfs:range :Fração .
+
+
+###  http://www.di.uminho.pt/Afericao#temReceita
+:temReceita rdf:type owl:ObjectProperty ;
+            rdfs:domain :Receitas ;
+            rdfs:range :Pessoa .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.di.uminho.pt/Afericao#data
+:data rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/Afericao#descrição
+:descrição rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/Afericao#email
+:email rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/Afericao#fração
+:fração rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/Afericao#mensalidade
+:mensalidade rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/Afericao#nome
+:nome rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/Afericao#número
+:número rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/Afericao#permilagem
+:permilagem rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.di.uminho.pt/Afericao#telefone
+:telefone rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/Afericao#tipo
+:tipo rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/Afericao#valor
+:valor rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.di.uminho.pt/Afericao#Despesas
+:Despesas rdf:type owl:Class ;
+          rdfs:subClassOf :Livro .
+
+
+###  http://www.di.uminho.pt/Afericao#Fornecedor
+:Fornecedor rdf:type owl:Class .
+
+
+###  http://www.di.uminho.pt/Afericao#Fração
+:Fração rdf:type owl:Class .
+
+
+###  http://www.di.uminho.pt/Afericao#Livro
+:Livro rdf:type owl:Class .
+
+
+###  http://www.di.uminho.pt/Afericao#Mês
+:Mês rdf:type owl:Class .
+
+
+###  http://www.di.uminho.pt/Afericao#Pessoa
+:Pessoa rdf:type owl:Class .
+
+
+###  http://www.di.uminho.pt/Afericao#Receitas
+:Receitas rdf:type owl:Class ;
+          rdfs:subClassOf :Livro .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.di.uminho.pt/Afericao#Abr
+:Abr rdf:type owl:NamedIndividual ,
+              :Mês .
+
+
+###  http://www.di.uminho.pt/Afericao#Ago
+:Ago rdf:type owl:NamedIndividual ,
+              :Mês .
+
+
+###  http://www.di.uminho.pt/Afericao#CGD
+:CGD rdf:type owl:NamedIndividual ,
+              :Fornecedor .
+
+
+###  http://www.di.uminho.pt/Afericao#CMB
+:CMB rdf:type owl:NamedIndividual ,
+              :Fornecedor .
+
+
+###  http://www.di.uminho.pt/Afericao#Dez
+:Dez rdf:type owl:NamedIndividual ,
+              :Mês .
+
+
+###  http://www.di.uminho.pt/Afericao#EDP
+:EDP rdf:type owl:NamedIndividual ,
+              :Fornecedor .
+
+
+###  http://www.di.uminho.pt/Afericao#Fev
+:Fev rdf:type owl:NamedIndividual ,
+              :Mês .
+
+
+###  http://www.di.uminho.pt/Afericao#Jan
+:Jan rdf:type owl:NamedIndividual ,
+              :Mês .
+
+
+###  http://www.di.uminho.pt/Afericao#Jul
+:Jul rdf:type owl:NamedIndividual ,
+              :Mês .
+
+
+###  http://www.di.uminho.pt/Afericao#Jun
+:Jun rdf:type owl:NamedIndividual ,
+              :Mês .
+
+
+###  http://www.di.uminho.pt/Afericao#Kone
+:Kone rdf:type owl:NamedIndividual ,
+               :Fornecedor .
+
+
+###  http://www.di.uminho.pt/Afericao#Limpeza
+:Limpeza rdf:type owl:NamedIndividual ,
+                  :Fornecedor .
+
+
+###  http://www.di.uminho.pt/Afericao#Loja
+:Loja rdf:type owl:NamedIndividual ,
+               :Fração ;
+      :fração "A" ;
+      :mensalidade 6.06 ;
+      :permilagem 50 .
+
+
+###  http://www.di.uminho.pt/Afericao#Mai
+:Mai rdf:type owl:NamedIndividual ,
+              :Mês .
+
+
+###  http://www.di.uminho.pt/Afericao#Mar
+:Mar rdf:type owl:NamedIndividual ,
+              :Mês .
+
+
+###  http://www.di.uminho.pt/Afericao#Nov
+:Nov rdf:type owl:NamedIndividual ,
+              :Mês .
+
+
+###  http://www.di.uminho.pt/Afericao#Out
+:Out rdf:type owl:NamedIndividual ,
+              :Mês .
+
+
+###  http://www.di.uminho.pt/Afericao#PluriRapel
+:PluriRapel rdf:type owl:NamedIndividual ,
+                     :Fornecedor .
+
+
+###  http://www.di.uminho.pt/Afericao#Serralheiro
+:Serralheiro rdf:type owl:NamedIndividual ,
+                      :Fornecedor .
+
+
+###  http://www.di.uminho.pt/Afericao#Set
+:Set rdf:type owl:NamedIndividual ,
+              :Mês .
+
+
+###  http://www.di.uminho.pt/Afericao#Vizinhos
+:Vizinhos rdf:type owl:NamedIndividual ,
+                   :Fornecedor .
+
+
+###  http://www.di.uminho.pt/Afericao#1º_Dto
+<http://www.di.uminho.pt/Afericao#1º_Dto> rdf:type owl:NamedIndividual ,
+                                                   :Fração ;
+                                          :temPagado :Abr ,
+                                                     :Fev ,
+                                                     :Jan ,
+                                                     :Mar ;
+                                          :fração "F" ;
+                                          :mensalidade 36.45 ;
+                                          :permilagem 24 .
+
+
+###  http://www.di.uminho.pt/Afericao#1º_Esq
+<http://www.di.uminho.pt/Afericao#1º_Esq> rdf:type owl:NamedIndividual ,
+                                                   :Fração ;
+                                          :temPagado :Fev ,
+                                                     :Jan ,
+                                                     :Mar ;
+                                          :fração "G" ;
+                                          :mensalidade 51.63 ;
+                                          :permilagem 34 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/001
+<http://www.di.uminho.pt/Afericao#2020/001> rdf:type owl:NamedIndividual ,
+                                                     :Despesas ;
+                                            :temDespesa :CGD ;
+                                            :data "2020-01-04" ;
+                                            :descrição "Manutenção da conta" ;
+                                            :valor 7.28 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/002
+<http://www.di.uminho.pt/Afericao#2020/002> rdf:type owl:NamedIndividual ,
+                                                     :Receitas ;
+                                            :temReceita <http://www.di.uminho.pt/Afericao#7º_Esq> ;
+                                            :data "2020-01-06" ;
+                                            :descrição "Janeiro" ;
+                                            :valor 64.00 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/003
+<http://www.di.uminho.pt/Afericao#2020/003> rdf:type owl:NamedIndividual ,
+                                                     :Receitas ;
+                                            :temReceita <http://www.di.uminho.pt/Afericao#2º_Dto> ;
+                                            :data "2020-01-06" ;
+                                            :valor 406.62 ,
+                                                   "Abril a Dezembro de 2019" .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/004
+<http://www.di.uminho.pt/Afericao#2020/004> rdf:type owl:NamedIndividual ,
+                                                     :Despesas ;
+                                            :temDespesa :EDP ;
+                                            :data "2020-01-08" ;
+                                            :descrição "Luz" ;
+                                            :valor 222.65 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/005
+<http://www.di.uminho.pt/Afericao#2020/005> rdf:type owl:NamedIndividual ,
+                                                     :Receitas ;
+                                            :temReceita <http://www.di.uminho.pt/Afericao#7º_Dto> ;
+                                            :data "2020-01-16" ;
+                                            :descrição "Janeiro" ;
+                                            :valor 45.18 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/006
+<http://www.di.uminho.pt/Afericao#2020/006> rdf:type owl:NamedIndividual ,
+                                                     :Despesas ;
+                                            :temDespesa :CGD ;
+                                            :data "2020-02-01" ;
+                                            :descrição "Manutenção da conta" ;
+                                            :valor 7.28 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/007
+<http://www.di.uminho.pt/Afericao#2020/007> rdf:type owl:NamedIndividual ,
+                                                     :Receitas ;
+                                            :temReceita <http://www.di.uminho.pt/Afericao#5º_Esq> ;
+                                            :data "2020-02-04" ;
+                                            :descrição "Fevereiro" ;
+                                            :valor 64.00 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/008
+<http://www.di.uminho.pt/Afericao#2020/008> rdf:type owl:NamedIndividual ,
+                                                     :Receitas ;
+                                            :temReceita <http://www.di.uminho.pt/Afericao#7º_Esq> ;
+                                            :data "2020-02-06" ;
+                                            :descrição "Fevereiro" ;
+                                            :valor 64.00 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/009
+<http://www.di.uminho.pt/Afericao#2020/009> rdf:type owl:NamedIndividual ,
+                                                     :Despesas ;
+                                            :temDespesa :Kone ;
+                                            :data "2020-01-20" ;
+                                            :descrição "Manutenção dos elevadores: 1º trimestre" ;
+                                            :valor 439.77 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/010
+<http://www.di.uminho.pt/Afericao#2020/010> rdf:type owl:NamedIndividual ,
+                                                     :Receitas ;
+                                            :temReceita <http://www.di.uminho.pt/Afericao#1º_Esq> ,
+                                                        <http://www.di.uminho.pt/Afericao#3º_Esq> ;
+                                            :data "2020-02-12" ;
+                                            :descrição "\"Janeiro, Fevereiro e Março\"" ;
+                                            :valor 384.00 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/011
+<http://www.di.uminho.pt/Afericao#2020/011> rdf:type owl:NamedIndividual ,
+                                                     :Receitas ;
+                                            :temReceita <http://www.di.uminho.pt/Afericao#7º_Dto> ;
+                                            :data "2020-02-20" ;
+                                            :descrição "Fevereiro" ;
+                                            :valor 45.18 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/012
+<http://www.di.uminho.pt/Afericao#2020/012> rdf:type owl:NamedIndividual ,
+                                                     :Despesas ;
+                                            :temDespesa :Serralheiro ;
+                                            :data "2020-02-24" ;
+                                            :descrição "Concerto do trinco da porta" ;
+                                            :valor 20.00 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/013
+<http://www.di.uminho.pt/Afericao#2020/013> rdf:type owl:NamedIndividual ,
+                                                     :Despesas ;
+                                            :temDespesa :CMB ;
+                                            :data "2020-02-24" ;
+                                            :descrição "Inspeção dos elevadores" ;
+                                            :valor 174.30 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/014
+<http://www.di.uminho.pt/Afericao#2020/014> rdf:type owl:NamedIndividual ,
+                                                     :Receitas ;
+                                            :temReceita <http://www.di.uminho.pt/Afericao#1º_Dto> ;
+                                            :data "2020-02-24" ;
+                                            :descrição "\"Acertos: Janeiro, Fevereiro, Março, Abril e 13.58 de Maio\"" ;
+                                            :valor 194.30 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/015
+<http://www.di.uminho.pt/Afericao#2020/015> rdf:type owl:NamedIndividual ,
+                                                     :Receitas ;
+                                            :temReceita <http://www.di.uminho.pt/Afericao#5º_Dto> ;
+                                            :data "2020-03-11" ;
+                                            :descrição "Janeiro a Junho" ;
+                                            :valor 271.08 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/016
+<http://www.di.uminho.pt/Afericao#2020/016> rdf:type owl:NamedIndividual ,
+                                                     :Despesas ;
+                                            :temDespesa :PluriRapel ;
+                                            :data "2020-03-11" ;
+                                            :valor 1655.00 ,
+                                                   "Reparação das fachadas" .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/017
+<http://www.di.uminho.pt/Afericao#2020/017> rdf:type owl:NamedIndividual ,
+                                                     :Receitas ;
+                                            :temReceita <http://www.di.uminho.pt/Afericao#5º_Esq> ;
+                                            :data "2020-02-26" ;
+                                            :descrição "Março" ;
+                                            :valor 64.00 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/018
+<http://www.di.uminho.pt/Afericao#2020/018> rdf:type owl:NamedIndividual ,
+                                                     :Receitas ;
+                                            :temReceita <http://www.di.uminho.pt/Afericao#3º_Dto> ;
+                                            :data "2020-02-29" ;
+                                            :descrição "Janeiro a Dezembro" ;
+                                            :valor 542.16 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/019
+<http://www.di.uminho.pt/Afericao#2020/019> rdf:type owl:NamedIndividual ,
+                                                     :Despesas ;
+                                            :temDespesa :EDP ;
+                                            :data "2020-03-04" ;
+                                            :descrição "Luz" ;
+                                            :valor 236.59 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/020
+<http://www.di.uminho.pt/Afericao#2020/020> rdf:type owl:NamedIndividual ,
+                                                     :Receitas ;
+                                            :temReceita <http://www.di.uminho.pt/Afericao#7º_Esq> ;
+                                            :data "2020-03-06" ;
+                                            :descrição "Março" ;
+                                            :valor 64.00 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/021
+<http://www.di.uminho.pt/Afericao#2020/021> rdf:type owl:NamedIndividual ,
+                                                     :Despesas ;
+                                            :temDespesa :CGD ;
+                                            :data "2020-03-07" ;
+                                            :descrição "Manutenção da conta" ;
+                                            :valor 7.28 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/022
+<http://www.di.uminho.pt/Afericao#2020/022> rdf:type owl:NamedIndividual ,
+                                                     :Receitas ;
+                                            :temReceita <http://www.di.uminho.pt/Afericao#7º_Dto> ;
+                                            :data "2020-03-15" ;
+                                            :descrição "Março" ;
+                                            :valor 45.18 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/023
+<http://www.di.uminho.pt/Afericao#2020/023> rdf:type owl:NamedIndividual ,
+                                                     :Receitas ;
+                                            :temReceita <http://www.di.uminho.pt/Afericao#5º_Esq> ;
+                                            :data "2020-03-30" ;
+                                            :descrição "Abril" ;
+                                            :valor 64.00 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/024
+<http://www.di.uminho.pt/Afericao#2020/024> rdf:type owl:NamedIndividual ,
+                                                     :Despesas ;
+                                            :temDespesa :CGD ;
+                                            :data "2020-04-04" ;
+                                            :descrição "Manutenção da conta" ;
+                                            :valor 7.28 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/025
+<http://www.di.uminho.pt/Afericao#2020/025> rdf:type owl:NamedIndividual ,
+                                                     :Receitas ;
+                                            :temReceita <http://www.di.uminho.pt/Afericao#7º_Esq> ;
+                                            :data "2020-04-06" ;
+                                            :descrição "Abril" ;
+                                            :valor 64.00 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/026
+<http://www.di.uminho.pt/Afericao#2020/026> rdf:type owl:NamedIndividual ,
+                                                     :Receitas ;
+                                            :temReceita <http://www.di.uminho.pt/Afericao#6º_Dto> ;
+                                            :data "2020-04-07" ;
+                                            :descrição "Abril a Agosto" ;
+                                            :valor 225.90 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/027
+<http://www.di.uminho.pt/Afericao#2020/027> rdf:type owl:NamedIndividual ,
+                                                     :Receitas ;
+                                            :temReceita <http://www.di.uminho.pt/Afericao#7º_Dto> ;
+                                            :data "2020-04-14" ;
+                                            :descrição "Abril" ;
+                                            :valor 45.18 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/028
+<http://www.di.uminho.pt/Afericao#2020/028> rdf:type owl:NamedIndividual ,
+                                                     :Despesas ;
+                                            :temDespesa :Vizinhos ;
+                                            :data "2020-04-15" ;
+                                            :descrição "Comum" ;
+                                            :valor 207.98 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/029
+<http://www.di.uminho.pt/Afericao#2020/029> rdf:type owl:NamedIndividual ,
+                                                     :Despesas ;
+                                            :temDespesa :Limpeza ;
+                                            :data "2020-04-15" ;
+                                            :descrição "Limpeza 2020" ;
+                                            :valor 1080.00 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/030
+<http://www.di.uminho.pt/Afericao#2020/030> rdf:type owl:NamedIndividual ,
+                                                     :Receitas ;
+                                            :temReceita <http://www.di.uminho.pt/Afericao#4º_Dto> ;
+                                            :data "2020-04-15" ;
+                                            :descrição "Janeiro a Dezembro" ;
+                                            :valor 542.16 .
+
+
+###  http://www.di.uminho.pt/Afericao#2020/031
+<http://www.di.uminho.pt/Afericao#2020/031> rdf:type owl:NamedIndividual ,
+                                                     :Despesas ;
+                                            :temDespesa :Kone ;
+                                            :data "2020-04-01" ;
+                                            :descrição "Manutenção dos elevadores: 2º trimestre" ;
+                                            :valor 439.77 .
+
+
+###  http://www.di.uminho.pt/Afericao#2º_Dto
+<http://www.di.uminho.pt/Afericao#2º_Dto> rdf:type owl:NamedIndividual ,
+                                                   :Fração ;
+                                          :fração "H" ;
+                                          :mensalidade 36.45 ;
+                                          :permilagem 24 .
+
+
+###  http://www.di.uminho.pt/Afericao#3º_Dto
+<http://www.di.uminho.pt/Afericao#3º_Dto> rdf:type owl:NamedIndividual ,
+                                                   :Fração ;
+                                          :temPagado :Abr ,
+                                                     :Ago ,
+                                                     :Dez ,
+                                                     :Fev ,
+                                                     :Jan ,
+                                                     :Jul ,
+                                                     :Jun ,
+                                                     :Mai ,
+                                                     :Mar ,
+                                                     :Nov ,
+                                                     :Out ,
+                                                     :Set ;
+                                          :fração "I" ;
+                                          :mensalidade 36.45 ;
+                                          :permilagem 24 .
+
+
+###  http://www.di.uminho.pt/Afericao#3º_Esq
+<http://www.di.uminho.pt/Afericao#3º_Esq> rdf:type owl:NamedIndividual ,
+                                                   :Fração ;
+                                          :temPagado :Fev ,
+                                                     :Jan ,
+                                                     :Mar ;
+                                          :fração "J" ;
+                                          :mensalidade 51.63 ;
+                                          :permilagem 34 .
+
+
+###  http://www.di.uminho.pt/Afericao#4º_Dto
+<http://www.di.uminho.pt/Afericao#4º_Dto> rdf:type owl:NamedIndividual ,
+                                                   :Fração ;
+                                          :temPagado :Abr ,
+                                                     :Ago ,
+                                                     :Dez ,
+                                                     :Fev ,
+                                                     :Jan ,
+                                                     :Jul ,
+                                                     :Jun ,
+                                                     :Mai ,
+                                                     :Mar ,
+                                                     :Nov ,
+                                                     :Out ,
+                                                     :Set ;
+                                          :fração "L" ;
+                                          :mensalidade 36.45 ;
+                                          :permilagem 24 .
+
+
+###  http://www.di.uminho.pt/Afericao#5º_Dto
+<http://www.di.uminho.pt/Afericao#5º_Dto> rdf:type owl:NamedIndividual ,
+                                                   :Fração ;
+                                          :temPagado :Abr ,
+                                                     :Fev ,
+                                                     :Jan ,
+                                                     :Jun ,
+                                                     :Mai ,
+                                                     :Mar ;
+                                          :fração "M" ;
+                                          :mensalidade 36.45 ;
+                                          :permilagem 24 .
+
+
+###  http://www.di.uminho.pt/Afericao#5º_Esq
+<http://www.di.uminho.pt/Afericao#5º_Esq> rdf:type owl:NamedIndividual ,
+                                                   :Fração ;
+                                          :temPagado :Abr ,
+                                                     :Fev ,
+                                                     :Jan ,
+                                                     :Mar ;
+                                          :fração "N" ;
+                                          :mensalidade 51.63 ;
+                                          :permilagem 34 .
+
+
+###  http://www.di.uminho.pt/Afericao#6º_Dto
+<http://www.di.uminho.pt/Afericao#6º_Dto> rdf:type owl:NamedIndividual ,
+                                                   :Fração ;
+                                          :temPagado :Abr ,
+                                                     :Ago ,
+                                                     :Fev ,
+                                                     :Jan ,
+                                                     :Jul ,
+                                                     :Jun ,
+                                                     :Mai ,
+                                                     :Mar ;
+                                          :fração "O" ;
+                                          :mensalidade 36.45 ;
+                                          :permilagem 24 .
+
+
+###  http://www.di.uminho.pt/Afericao#7º_Dto
+<http://www.di.uminho.pt/Afericao#7º_Dto> rdf:type owl:NamedIndividual ,
+                                                   :Fração ;
+                                          :temPagado :Abr ,
+                                                     :Fev ,
+                                                     :Jan ,
+                                                     :Mar ;
+                                          :fração "P" ;
+                                          :mensalidade 36.45 ;
+                                          :permilagem 24 .
+
+
+###  http://www.di.uminho.pt/Afericao#7º_Esq
+<http://www.di.uminho.pt/Afericao#7º_Esq> rdf:type owl:NamedIndividual ,
+                                                   :Fração ;
+                                          :temPagado :Abr ,
+                                                     :Fev ,
+                                                     :Jan ,
+                                                     :Mar ;
+                                          :fração "Q" ;
+                                          :permilagem 34 ,
+                                                      51.63 .
+
+
+###  http://www.di.uminho.pt/Afericao#8º_Dto
+<http://www.di.uminho.pt/Afericao#8º_Dto> rdf:type owl:NamedIndividual ,
+                                                   :Fração ;
+                                          :fração "R" ;
+                                          :mensalidade 36.45 ;
+                                          :permilagem 24 .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
