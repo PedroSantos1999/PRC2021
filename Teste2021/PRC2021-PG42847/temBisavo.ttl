@@ -1,0 +1,86 @@
+@prefix : <http://prc.di.uminho.pt/2021/myfamily#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf4j: <http://rdf4j.org/schema/rdf4j#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+
+:Ana_da_Silva_Ramalho :temBisavo :Custódia_Azevedo_1867, :Manuel_da_Silva_Ramalho_1866 .
+
+:António_da_Silva_Ramalho_1904 :temBisavo :Custódia_Azevedo_1867, :Manuel_da_Silva_Ramalho_1866 .
+
+:Arminda_da_Silva_Ramalho :temBisavo :Custódia_Azevedo_1867, :Manuel_da_Silva_Ramalho_1866 .
+
+:Ezequiel_da_Silva_Ramalho :temBisavo :Custódia_Azevedo_1867, :Manuel_da_Silva_Ramalho_1866 .
+
+:Generosa_da_Silva_Ramalho :temBisavo :Custódia_Azevedo_1867, :Manuel_da_Silva_Ramalho_1866 .
+
+:Emília_Esteves_de_Araújo_1908 :temBisavo :Maria_Araújo_1884, :Henrique_Luiz_de_Araújo_1867 .
+
+:Filomena_Esteves_de_Araújo_1927 :temBisavo :Maria_Araújo_1884, :Henrique_Luiz_de_Araújo_1867 .
+
+:Henrique_Luís_Esteves_de_Araújo_1924 :temBisavo :Maria_Araújo_1884, :Henrique_Luiz_de_Araújo_1867 .
+
+:Maria_Esteves_de_Araújo_1912 :temBisavo :Maria_Araújo_1884, :Henrique_Luiz_de_Araújo_1867 .
+
+:José_Emílio_Esteves_de_Araújo_1916 :temBisavo :Maria_Araújo_1884, :Henrique_Luiz_de_Araújo_1867 .
+
+:Luís_Esteves_de_Araújo_1918 :temBisavo :Maria_Araújo_1884, :Henrique_Luiz_de_Araújo_1867 .
+
+:Sara_Esteves_de_Araújo_1914 :temBisavo :Maria_Araújo_1884, :Henrique_Luiz_de_Araújo_1867 .
+
+:Virgínia_Esteves_de_Araújo_1921 :temBisavo :Maria_Araújo_1884, :Henrique_Luiz_de_Araújo_1867 .
+
+:Teresa_Maria_Ribeiro_Leite_1985 :temBisavo :Maria_Margarida_Ribeiro_1954, :Rui_Alberto_Araújo_Leite_1948 .
+
+:Henrique_Marçal_Araújo_Leite_1943 :temBisavo :Maria_Esteves_de_Araújo_1912, :Marçal_Aristides_Costa_Leite_1909 .
+
+:Maria_Flora_Araújo_Leite_1941 :temBisavo :Maria_Esteves_de_Araújo_1912, :Marçal_Aristides_Costa_Leite_1909 .
+
+:Abílio_da_Silva_Ramalho :temBisavo :Custódia_Azevedo_1867, :Manuel_da_Silva_Ramalho_1866 .
+
+:Gilberto_Couto_Leite :temBisavo :Flora_Castilho_do_Couto_Leite, :Marçal_da_Costa_Leite .
+
+:Helena_Couto_Leite :temBisavo :Flora_Castilho_do_Couto_Leite, :Marçal_da_Costa_Leite .
+
+:Marçal_Aristides_Costa_Leite_1909 :temBisavo :Flora_Castilho_do_Couto_Leite, :Marçal_da_Costa_Leite .
+
+:João_Bernardo_Couto_Leite_1916 :temBisavo :Flora_Castilho_do_Couto_Leite, :Marçal_da_Costa_Leite .
+
+:Orlando_Couto_Leite :temBisavo :Flora_Castilho_do_Couto_Leite, :Marçal_da_Costa_Leite .
+
+:Rosa_Couto_Leite :temBisavo :Flora_Castilho_do_Couto_Leite, :Marçal_da_Costa_Leite .
+
+:Albina_Esteves_de_Araújo_1910 :temBisavo :Maria_Araújo_1884, :Henrique_Luiz_de_Araújo_1867 .
+
+:Maria_Alves_dos_Santos_1906 :temBisavo :Christina_Rosa_Silva_Santos_1879, :Jozé_da_Silva_Santos_1879 .
+
+:Domingos_Couto_Leite :temBisavo :Flora_Castilho_do_Couto_Leite, :Marçal_da_Costa_Leite .
+
+:Rui_Alberto_Araújo_Leite_1948 :temBisavo :Maria_Esteves_de_Araújo_1912, :Marçal_Aristides_Costa_Leite_1909 .
+
+:Isabel_Maria_Cabrita_de_Araújo_Leite_1971 :temBisavo :Henrique_Marçal_Araújo_Leite_1943,
+    :Maria_Otília_Araújo_Leite_1944 .
+
+:José_dos_Santos_Ramalho_1942 :temBisavo :António_da_Silva_Ramalho_1904, :Maria_Alves_dos_Santos_1906 .
+
+:Manuel_Carlos_dos_Santos_Ramalho :temBisavo :António_da_Silva_Ramalho_1904, :Maria_Alves_dos_Santos_1906 .
+
+:Manuel_Fernando_dos_Santos_Ramalho :temBisavo :António_da_Silva_Ramalho_1904, :Maria_Alves_dos_Santos_1906 .
+
+:Maria_Flora_dos_Santos_Ramalho_ :temBisavo :António_da_Silva_Ramalho_1904, :Maria_Alves_dos_Santos_1906 .
+
+:Florinda_Alves_dos_Santos :temBisavo :Christina_Rosa_Silva_Santos_1879, :Jozé_da_Silva_Santos_1879 .
+
+:Henrique_Miguel_Cabrita_de_Araújo_Leite_1971 :temBisavo :Henrique_Marçal_Araújo_Leite_1943,
+    :Maria_Otília_Araújo_Leite_1944 .
+
+:Maria_Helena_Leite_Ramalho_1968 :temBisavo :Maria_Flora_Araújo_Leite_1941, :José_dos_Santos_Ramalho_1942 .
+
+:Ilda_dos_Santos_Ramalho_1949 :temBisavo :António_da_Silva_Ramalho_1904, :Maria_Alves_dos_Santos_1906 .
+
+:José_Carlos_Leite_Ramalho_1967 :temBisavo :Maria_Flora_Araújo_Leite_1941, :José_dos_Santos_Ramalho_1942 .
+
+:Ana_Margarida_Ribeiro_Leite_1980 :temBisavo :Maria_Margarida_Ribeiro_1954, :Rui_Alberto_Araújo_Leite_1948 .

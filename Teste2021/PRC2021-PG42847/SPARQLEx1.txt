@@ -1,0 +1,59 @@
+Sobre a ontologia especifica as queries SPARQL capazes de gerar os seguintes resultados:
+
+1. Quantos exames estão registados?
+
+PREFIX : <http://www.di.uminho.pt/prc2021/exercicio1#>
+SELECT (COUNT(?emd) AS ?total) WHERE {
+    ?emd a :EMD . 
+}
+
+2. Quantos exames tiveram um resultado válido?
+
+PREFIX : <http://www.di.uminho.pt/prc2021/exercicio1#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT (COUNT(?emd) AS ?total) WHERE {
+    ?emd a :EMD . 
+    ?emd :resultado "true"^^xsd:boolean.
+}
+
+3. Qual a distribuição dos exames por género?
+
+PREFIX : <http://www.di.uminho.pt/prc2021/exercicio1#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?genero (COUNT(?s) AS ?total) WHERE { 
+    ?s a :EMD .
+    ?s :pertenceAtleta ?atleta .
+    ?atleta :genero ?genero .
+}
+GROUP BY ?genero
+
+4. Qual a distribuição dos exames por modalidade?
+
+PREFIX : <http://www.di.uminho.pt/prc2021/exercicio1#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?modalidade (COUNT(?s) AS ?total) WHERE { 
+    ?s a :EMD .
+    ?s :pertenceAtleta ?atleta .
+    ?atleta :temModalidade ?modalidade .
+}
+GROUP BY ?modalidade
+
+5. Quantos atletas federados do "GDGoma" fizeram EMD?
+
+PREFIX : <http://www.di.uminho.pt/prc2021/exercicio1#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT (COUNT(?atleta) AS ?total) WHERE { 
+    ?atleta :pertenceClube :GDGoma ;
+            :temIndex ?emd.
+    ?emd :federado "true"^^xsd:boolean.
+}
+
+6. Quantos atletas do género feminino que praticam Triatlo fizeram EMD?
+
+PREFIX : <http://www.di.uminho.pt/prc2021/exercicio1#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT (COUNT(?atleta) AS ?total) WHERE { 
+    ?atleta :temModalidade :Triatlo ;
+            :genero "F" ;
+            :temIndex ?emd.
+}

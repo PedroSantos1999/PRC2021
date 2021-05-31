@@ -1,0 +1,70 @@
+Parte 1: Especifica as seguintes queries CONSTRUCT:
+
+1. Constrói os triplos da relação Irmão;
+
+PREFIX : <http://prc.di.uminho.pt/2021/myfamily#>
+
+CONSTRUCT {
+    ?a :temIrmao ?b .
+} 
+WHERE {
+    ?a :temProgenitor ?p1 .
+    ?b :temProgenitor ?p1 .
+    
+    FILTER(?a != ?b) 
+}
+
+2. Constrói os triplos da relação Bisavô;
+
+PREFIX : <http://prc.di.uminho.pt/2021/myfamily#>
+
+CONSTRUCT {
+     ?a :temBisavo ?b .
+} WHERE {
+     ?a :temProgenitor ?p1 .
+     ?p1 :eProgenitorDe ?p2 .
+     ?p2 :temProgenitor ?b .
+     FILTER(?a != ?p1 && ?a != ?p2 && ?a != ?b && ?p1 != ?p2 && ?p1 != ?b && ?p2 != ?b)
+}
+
+3. Constrói os triplos da relação Descendentes;
+
+CONSTRUCT {
+    ?a :temDescendentes ?b .
+} 
+WHERE {
+    ?a :eProgenitorDe ?p1 .
+    ?b :temIrmao ?p1 .
+    
+    FILTER(?a != ?b) 
+}
+
+4. Constrói os triplos da relação Primo;
+
+PREFIX : <http://prc.di.uminho.pt/2021/myfamily#>
+
+CONSTRUCT {
+            ?a :temPrimo ?b .
+} WHERE {
+            ?a :temProgenitor ?p1 . 
+            ?p1 :temProgenitor ?pp1 .
+            ?pp1 :eProgenitorDe ?p2 .
+            ?p2 :eProgenitorDe ?b .
+            FILTER(?a != ?b && ?a != ?p1 && ?a != ?pp1 && ?a != ?p2 && ?b != ?p1 && ?b != ?pp1 && ?b != ?p2 && ?p1 != ?pp1 && ?p1 != ?p2 && ?pp1 !=  ?p2)
+}
+
+5. Acrescenta o atributo sexo à tua ontologia, há várias formas de o fazer, escolhe a que entenderes. Constrói os triplos relacionados com esta propriedade usando as propriedades existentes: temPai e temMae;
+
+PREFIX : <http://prc.di.uminho.pt/2021/myfamily#>
+
+CONSTRUCT {
+    ?a :sexo "F" . 
+    ?b :sexo "M" .
+} WHERE {
+    ?p1 :temMae ?a .
+    ?p2 :temPai ?b .
+}
+
+6. Constrói os triplos das pessoas relacionadas com "José_Carlos_Leite_Ramalho_1967", diretamente ou indiretamente, ou seja, para todas as pessoas com caminho no grafo até ao indivíduo em questão constrói o triplo: :José_Carlos_Leite_Ramalho_1967 :temRelacaoCom :indivíduoX .
+
+

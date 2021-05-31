@@ -1,0 +1,66 @@
+@prefix : <http://prc.di.uminho.pt/2021/myfamily#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf4j: <http://rdf4j.org/schema/rdf4j#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+
+:Custódia_Azevedo_1867 :temDescendentes :Ana_da_Silva_Ramalho, :António_da_Silva_Ramalho_1904,
+    :Arminda_da_Silva_Ramalho, :Ezequiel_da_Silva_Ramalho, :Generosa_da_Silva_Ramalho,
+    :Abílio_da_Silva_Ramalho .
+
+:Manuel_da_Silva_Ramalho_1866 :temDescendentes :Ana_da_Silva_Ramalho, :António_da_Silva_Ramalho_1904,
+    :Arminda_da_Silva_Ramalho, :Ezequiel_da_Silva_Ramalho, :Generosa_da_Silva_Ramalho,
+    :Abílio_da_Silva_Ramalho .
+
+:Maria_Araújo_1884 :temDescendentes :Emília_Esteves_de_Araújo_1908, :Filomena_Esteves_de_Araújo_1927,
+    :Henrique_Luís_Esteves_de_Araújo_1924, :Maria_Esteves_de_Araújo_1912, :José_Emílio_Esteves_de_Araújo_1916,
+    :Luís_Esteves_de_Araújo_1918, :Sara_Esteves_de_Araújo_1914, :Virgínia_Esteves_de_Araújo_1921,
+    :Albina_Esteves_de_Araújo_1910 .
+
+:Henrique_Luiz_de_Araújo_1867 :temDescendentes :Emília_Esteves_de_Araújo_1908, :Filomena_Esteves_de_Araújo_1927,
+    :Henrique_Luís_Esteves_de_Araújo_1924, :Maria_Esteves_de_Araújo_1912, :José_Emílio_Esteves_de_Araújo_1916,
+    :Luís_Esteves_de_Araújo_1918, :Sara_Esteves_de_Araújo_1914, :Virgínia_Esteves_de_Araújo_1921,
+    :Albina_Esteves_de_Araújo_1910 .
+
+:Maria_Margarida_Ribeiro_1954 :temDescendentes :Teresa_Maria_Ribeiro_Leite_1985, :Ana_Margarida_Ribeiro_Leite_1980 .
+
+:Rui_Alberto_Araújo_Leite_1948 :temDescendentes :Teresa_Maria_Ribeiro_Leite_1985,
+    :Ana_Margarida_Ribeiro_Leite_1980 .
+
+:António_da_Silva_Ramalho_1904 :temDescendentes :José_dos_Santos_Ramalho_1942, :Manuel_Carlos_dos_Santos_Ramalho,
+    :Manuel_Fernando_dos_Santos_Ramalho, :Maria_Flora_dos_Santos_Ramalho_, :Ilda_dos_Santos_Ramalho_1949 .
+
+:Christina_Rosa_Silva_Santos_1879 :temDescendentes :Maria_Alves_dos_Santos_1906, :Florinda_Alves_dos_Santos .
+
+:Flora_Castilho_do_Couto_Leite :temDescendentes :Gilberto_Couto_Leite, :Helena_Couto_Leite,
+    :Marçal_Aristides_Costa_Leite_1909, :João_Bernardo_Couto_Leite_1916, :Orlando_Couto_Leite,
+    :Rosa_Couto_Leite, :Domingos_Couto_Leite .
+
+:Marçal_da_Costa_Leite :temDescendentes :Gilberto_Couto_Leite, :Helena_Couto_Leite,
+    :Marçal_Aristides_Costa_Leite_1909, :João_Bernardo_Couto_Leite_1916, :Orlando_Couto_Leite,
+    :Rosa_Couto_Leite, :Domingos_Couto_Leite .
+
+:Jozé_da_Silva_Santos_1879 :temDescendentes :Maria_Alves_dos_Santos_1906, :Florinda_Alves_dos_Santos .
+
+:Henrique_Marçal_Araújo_Leite_1943 :temDescendentes :Isabel_Maria_Cabrita_de_Araújo_Leite_1971,
+    :Henrique_Miguel_Cabrita_de_Araújo_Leite_1971 .
+
+:Maria_Esteves_de_Araújo_1912 :temDescendentes :Henrique_Marçal_Araújo_Leite_1943,
+    :Maria_Flora_Araújo_Leite_1941, :Rui_Alberto_Araújo_Leite_1948 .
+
+:Marçal_Aristides_Costa_Leite_1909 :temDescendentes :Henrique_Marçal_Araújo_Leite_1943,
+    :Maria_Flora_Araújo_Leite_1941, :Rui_Alberto_Araújo_Leite_1948 .
+
+:Maria_Otília_Araújo_Leite_1944 :temDescendentes :Isabel_Maria_Cabrita_de_Araújo_Leite_1971,
+    :Henrique_Miguel_Cabrita_de_Araújo_Leite_1971 .
+
+:Maria_Alves_dos_Santos_1906 :temDescendentes :José_dos_Santos_Ramalho_1942, :Manuel_Carlos_dos_Santos_Ramalho,
+    :Manuel_Fernando_dos_Santos_Ramalho, :Maria_Flora_dos_Santos_Ramalho_, :Ilda_dos_Santos_Ramalho_1949 .
+
+:Maria_Flora_Araújo_Leite_1941 :temDescendentes :Maria_Helena_Leite_Ramalho_1968,
+    :José_Carlos_Leite_Ramalho_1967 .
+
+:José_dos_Santos_Ramalho_1942 :temDescendentes :Maria_Helena_Leite_Ramalho_1968, :José_Carlos_Leite_Ramalho_1967 .
